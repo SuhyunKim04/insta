@@ -1,0 +1,26 @@
+//경로변수 
+$url:'./images/';
+$icon: $url + 'icon/';
+$photo: $url + 'photo/';
+
+//color 변수
+// font
+//
+
+
+$text : #222, #666, #999; // list
+$line : #e8e8e8, #fff;
+
+// object - map
+$form : (
+    focus : red,
+    focusBg : gray,
+    placeholder : nth($text, 3),
+    line : #d8d8d8
+);
+
+@debug nth($text, 3);
+
+input {
+    border:1px solid map-get($form, line);
+}
