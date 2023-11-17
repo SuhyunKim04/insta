@@ -24,3 +24,18 @@ $form : (
 input {
     border:1px solid map-get($form, line);
 }
+
+// flex 변수
+@mixin flex($j: space-between, $a:center, $d:null, $c:null, $r:null ){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $d;
+    column-gap: $c;
+    row-gap:$r;
+}
+
+// @mixin grid{
+//     display: grid;
+
+// }
