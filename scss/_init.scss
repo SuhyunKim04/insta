@@ -19,7 +19,7 @@ $form : (
     line : #d8d8d8
 );
 
-@debug nth($text, 3);
+// @debug nth($text, 3);
 
 input {
     border:1px solid map-get($form, line);
