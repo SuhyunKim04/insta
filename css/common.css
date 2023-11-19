@@ -3,6 +3,34 @@ input {
   border: 1px solid #d8d8d8;
 }
 
+.box1 {
+  width: 10px;
+}
+
+.wrap {
+  color: "#000";
+}
+
+.testBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testBox2 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testBox2 {
+  width: 300px;
+  height: auto;
+  display: flex;
+  border: 1px solid red;
+}
+
 * {
   box-sizing: border-box;
 }

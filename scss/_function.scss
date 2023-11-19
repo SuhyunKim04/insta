@@ -1,0 +1,62 @@
+
+@function check($size){
+    $type : type-of($value: $size);
+    @if $type == number and $size != 0 and unitless($size){
+        @return #{$size}px;
+    } @else{
+        @return $size;
+    }
+};
+
+//숫자인지먼저 비교하고, 숫자가 아니면 사이즈 리턴하고 끝이고
+// 숫자가 이면 0 인지 아닌지 체크하고 리턴
+ // $size : if( unitless($size),  #{$size}px,  $size);
+
+
+
+@function check2($size){
+    
+    $type : type-of($value: $size);
+    @debug $type; 
+    @if $type != number or $size == 0 {
+        @return $size;
+    } @else{
+        @if unitless($size) {
+            @return #{$size}px
+        }
+
+        @return $size
+        
+    }
+
+  
+};
+
+
+.testBox { 
+    @debug 'check2 : ' + check2(auto);
+
+}
+
+@mixin pCenter($w, $h, $p: absolute) {
+    @if true
+    {
+      width: if(unitless($w), #{$w}px, $w); 
+    }
+}
+  
+.box1 {
+    @include pCenter(10px, 20px);
+}
+
+@function test($a) {
+    $color : '#' + $a;
+    @debug $color;
+    @return  $color;
+}
+
+  .wrap { 
+    color : test('000') 
+}
+
+

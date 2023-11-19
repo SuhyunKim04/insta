@@ -1,0 +1,143 @@
+@mixin flex($j: space-between, $a:center, $d:null, $c:null, $r:null ){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $d;
+    column-gap: $c;
+    row-gap:$r;
+}
+
+@mixin grid ($rg: null, $cg:null, $gtc: null, $gtr:null){
+    display: grid;
+    row-gap: $rg;
+    column-gap:$cg;
+    grid-template-columns: $gtc;
+    grid-template-rows: $gtr;
+}
+
+@mixin fixed($l:0, $t:0, $r:0, $b:0){
+    position: fixed;
+    left:$l;
+    right:$r;
+    top:$t;
+    bottom: $b;
+}
+
+@mixin posFull($p:absolute) {
+    position:$p;
+    left:0;right:0;bottom:0;top:0;
+}
+
+@mixin dim($color:#000, $alpha:0.7, $p:fixed) {
+    @if $p != null {
+        @include posFull($p);
+    }
+    background-color:rgba($color, $alpha);
+}
+
+.testBox {
+    @include dim($p:absolute);
+}
+
+.testBox2 {
+    @include dim($p:null);
+}
+
+// .testBox2 {
+//     @include posFull;
+// }
+
+@mixin pos($p:absolute, $l:0, $t:0, $r:null, $b:null){
+    position: $p;
+    left:$l;
+    right:$r;
+    top:$t;
+    bottom:$b;
+}
+
+@mixin bgCover($path: null, $p:center center, $s: cover){
+    background: url($imgUrl + '#{$path}') no-repeat #{$p}/#{$s};
+}
+
+// @mixin before_after($margin-side,$before-after){
+//     &:#{$before-after} {
+//           height: $triangle-width;
+//           width: $triangle-width;
+//           content:"";
+//           position:absolute;
+//           margin-#{$margin-side}: -$triangle-width/2 -$stroke-width;
+//         }
+    
+// }
+
+@mixin posCenter($way:y, $pos:absolute){
+    position: $p;
+    @if ($way == y){
+        top: 50%;
+        transform: translateY(-50%);
+    }@else{
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    weight: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+@mixin iconBg($path, $size:24, $start:null, $end:null) {
+    display:block; 
+    background: no-repeat center center/contain;
+    $size : check($size);
+    
+    width:$size;
+    height:$size;
+
+    @debug ($start == null);
+
+    @if ( $start == null) {
+        background-image:url($url + '#{$path}.png');
+
+         
+    } @else {
+        @for $i from $start through $end {
+            &:nth-child(#{$i}) {
+                background-image:url($url + '#{$path}#{$i}.png');
+            }
+        }
+    }
+}
+
+@mixin blockBox($w:null, $h:null, $d:null) {
+    width : check($w);
+    height : check($h); 
+    display:$d;
+}
+
+
+
+@mixin border($w:1, $s:solid, $c:#ddd) {
+    border:check($w) $s $c;
+}
+
+@mixin createBox($w, $h:null, $r:null, $c:transparent, $b:false){
+    $r : check($r);
+    @include blockBox($w, $h);
+    border-radius:$r; 
+    background-color:$c; 
+
+    @if $b {
+        @include border;
+    }
+}
+
+
+.testBox2 {
+    @include blockBox(300, auto, flex);
+    @include border($c:red);
+}

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 //경로변수 
 $url:'./images/';
 $icon: $url + 'icon/';
@@ -6,6 +8,11 @@ $photo: $url + 'photo/';
 //color 변수
 // font
 //
+
+
+
+@debug 4px * 6px; // 24px*px (read "square pixels")
+@debug math.div(5px, 2s); // 2.5px/s (read "pixels per second")
 
 
 $text : #222, #666, #999; // list
@@ -26,78 +33,3 @@ input {
 }
 
 // flex 변수
-@mixin flex($j: space-between, $a:center, $d:null, $c:null, $r:null ){
-    display: flex;
-    justify-content: $j;
-    align-items: $a;
-    flex-direction: $d;
-    column-gap: $c;
-    row-gap:$r;
-}
-
-@mixin grid ($rg: null, $cg:null, $gtc: null, $gtr:null){
-    display: grid;
-    row-gap: $rg;
-    column-gap:$cg;
-    grid-template-columns: $gtc;
-    grid-template-rows: $gtr;
-}
-
-@mixin fixed($l:0, $t:0, $r:0, $b:0){
-    position: fixed;
-    left:$l;
-    right:$r;
-    top:$t;
-    bottom: $b;
-}
-
-@mixin pos($p:absolute, $l:0, $t:0, $r:null, $b:null){
-    position: $p;
-    left:$l;
-    right:$r;
-    top:$t;
-    bottom:$b;
-}
-
-@mixin bg($i: $imgUrl, $r: no-repeat, $p: left top, $s:cover ){
-    background-image:$i;
-    background-repeat: $r;
-    background-position: $p;
-    background-size:$s;
-}
-
-@mixin bgshort($path: null, $p:center center, $s: contain){
-    background: url($imgUrl + '#{$path}') no-repeat #{$p}/#{$s};
-}
-
-// @mixin before_after($margin-side,$before-after){
-//     &:#{$before-after} {
-//           height: $triangle-width;
-//           width: $triangle-width;
-//           content:"";
-//           position:absolute;
-//           margin-#{$margin-side}: -$triangle-width/2 -$stroke-width;
-//         }
-    
-// }
-
-@mixin posCenter($way:y, $pos:absolute){
-    position: $p;
-    @if ($way == y){
-        top: 50%;
-        transform: translateY(-50%);
-    }@else{
-        left:50%;
-        transform: translateX(-50%);
-    }
-}
-
-@mixin blind {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    weight: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-}
-
