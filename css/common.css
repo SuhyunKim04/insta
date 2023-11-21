@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Instagram";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Instagram.woff) format("woff");
+}
+@font-face {
+  font-family: "Instagram bold";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Instagram\ Sans\ Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Instagram light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Instagram\ Sans\ Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Instagram medi";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Instagram\ Sans\ Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Instagram sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/InstagramSans-Regular.woff) format("woff");
+}
 input {
   border: 1px solid #d8d8d8;
 }
@@ -99,7 +129,94 @@ fieldset {
 }
 
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: "Instagram sans", sans-serif;
+  font-size: 14px;
+}
+
+.bor {
+  border: 1px solid rgba(129, 129, 129, 0.4);
+  padding: 0 50px 20px;
+  border-radius: 1px;
+  text-align: center;
+}
+
+.login {
+  margin: 32px 190px 0;
+}
+.login h1 {
+  font-family: "Instagram", sans-serif;
+  font-size: 45px;
+  margin: 36px 0;
+}
+.login form .login_form .info input, .login form .login_form .password input {
+  width: 100%;
+  padding: 9px 8px;
+  background-color: rgb(250, 250, 250);
+}
+.login form .login_form .password {
+  margin-top: 10px;
+}
+.login form .login_form .blue {
+  width: 100%;
+  background-color: #75B1E0;
+  padding: 10px 0;
+  border-radius: 8px;
+  margin: 10px 0 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.login .login_or {
+  color: #737373;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+.login .login_or::before {
+  content: "";
+  height: 1px;
+  background-color: rgb(219, 219, 219);
+  width: 100%;
+}
+.login .login_or::after {
+  content: "";
+  height: 1px;
+  background-color: rgb(219, 219, 219);
+  width: 100%;
+}
+.login .face_book {
+  display: flex;
+  width: 100%;
+  margin: 18px 0;
+}
+.login .face_book .face_icon {
+  width: 100%;
+  display: block;
+}
+.login .face_book span {
+  display: block;
+}
+.login .reset_pw {
+  color: #00376B;
+}
+
+.sign {
+  margin: 15px 190px 0;
+  padding: 20px 20px;
+}
+.sign span {
+  color: #0095F6;
+  font-weight: 600;
+}
+
+.app_box {
+  text-align: center;
+  margin: 10px 0;
+}
+
+footer .bottom_icons {
+  display: flex;
 }
 
 /*# sourceMappingURL=common.css.map */

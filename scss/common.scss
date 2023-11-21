@@ -1,9 +1,42 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'Instagram';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/Instagram.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Instagram bold';
+    font-style: normal;
+    font-weight: 600;
+    src:url(../fonts/Instagram\ Sans\ Bold.ttf) format('truetype')
+}
+@font-face {
+    font-family: 'Instagram light';
+    font-style: normal;
+    font-weight: 300;
+    src:url(../fonts/Instagram\ Sans\ Light.ttf)format('truetype')
+}
+@font-face {
+    font-family: 'Instagram medi';
+    font-style: normal;
+    font-weight: 500;
+    src:url(../fonts/Instagram\ Sans\ Medium.ttf) format('truetype')
+}
+@font-face {
+    font-family: 'Instagram sans';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/InstagramSans-Regular.woff) format('woff');
+}
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @import 'init','function', 'mixin','reset'; 
 
 body{
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Instagram sans', sans-serif;
+    font-size: 14px;
 }
 
 @import 'index'; 
