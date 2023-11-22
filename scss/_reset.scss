@@ -24,6 +24,7 @@ body {
 em, i, address{
 	font-style: inherit;
 }
+
 h1,h2,h3,h4,h5,h6 {
 	font-weight:inherit;
 }
@@ -55,10 +56,15 @@ img{
 // form
 textarea { resize:none;}
 
-button {border: none; cursor:pointer;
+button {
+	border: none; cursor:pointer;
 	background:none;
 }
 
 fieldset{
 	border: none;
+}
+
+select { 
+	font-family: inherit;
 }

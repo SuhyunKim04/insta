@@ -20,6 +20,7 @@
                     width: 100%;
                     padding: 9px 8px;
                     background-color: rgb(250, 250, 250);
+                    font-size: 12px;
                 }
             }
             .password{
@@ -60,12 +61,12 @@
     }
 
     .face_book{
-       display: flex;
-       width: 100%;
+      
        margin: 18px 0;
+       
 
        .face_icon{
-        width: 100%;
+        font-size: 18px;
         display: block;
        }
        span{
@@ -80,7 +81,7 @@
 .sign{
     margin: 15px 190px 0;
     padding : 20px 20px;
-    span{
+    a{
         color: #0095F6;
         font-weight: 600;
     }
@@ -96,4 +97,12 @@ footer{
         display: flex;
     }
 
+}
+
+
+
+
+.face_book {
+    @include fontIcon(map-get($sns, f));
+    // @include fontIcon('\f16d', bounce);
 }

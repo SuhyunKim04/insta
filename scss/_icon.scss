@@ -1,0 +1,30 @@
+$sns: (
+    f:'\f082',
+    i:'\f16d'
+);
+
+$menu:(
+    home:'\f015',
+    search:'\f002',
+    plus:'\f0fe',
+    video:'\f008',
+    heart:'\f004',
+
+);
+
+
+
+
+@mixin fontIcon($code:null, $style:null) { 
+    display:flex;
+    align-items:center;
+    column-gap:10px;
+    &:before {
+        content:$code;
+        font-family: "Font Awesome 6 Brands"; 
+        font-weight:100;
+        @if $style == 'bounce' {
+            animation: fa-bounce 1s infinite cubic-bezier(.28,.84,.42,1) both;
+        }
+    }
+}
