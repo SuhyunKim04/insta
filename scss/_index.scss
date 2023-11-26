@@ -1,46 +1,48 @@
 .bar{
-    border: 1px solid rgba(129,129,129,0.4);
     padding: 0 50px 20px;
-    border-radius: 1px;
     text-align: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
     margin: 0 auto;
 
 }
 .login{
     margin-bottom: 50px;
+
     h1{
         font-family: 'Lobster', sans-serif;
         font-size: 45px;
-        margin: 36px 0;
+        margin: 42px 0;
     }
 
-    form{
         .login_form{
-            .info, .password{
-                input{
-                    width: 100%;
-                    padding: 9px 8px;
-                    background-color: rgb(250, 250, 250);
-                    font-size: 12px;
+            input{
+                width: 100%;
+                padding: 9px 8px;
+                background-color: rgb(250, 250, 250);
+                font-size: 12px;
+                border-radius: 5px;
+                &:nth-child(1){
+                    margin-bottom: 12px;
+                }
+                &:nth-child(2) {
+                    margin-bottom: 22px;
                 }
             }
+    
             .password{
                 margin-top:10px;
             }
             .blue{
                 width: 100%;
-                background-color: #75B1E0;
+                background-color: #3797EF;
                 padding: 10px 0;
                 border-radius: 8px;
-                margin: 10px 0 20px;
+                margin: 30px 0 20px;
                 color:#fff;
                 font-weight: 600;
             }
         }
-
-    }
 
     .login_or{
         color:#737373;
@@ -64,9 +66,10 @@
     }
 
     .face_book{
-      
-       margin: 18px 0;
-       
+        color: #3797EF;
+        margin: 18px 0;
+        @include fontIcon(map-get($sns, f));
+        
 
        .face_icon{
         font-size: 18px;
@@ -78,12 +81,14 @@
     }
     .reset_pw{
         color: #00376B;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
 .sign{
     a{
-        color: #0095F6;
+        color: #3797EF;
         font-weight: 600;
     }
 }
@@ -103,7 +108,3 @@ footer{
 
 
 
-.face_book {
-    @include fontIcon(map-get($sns, f));
-    // @include fontIcon('\f16d', bounce);
-}

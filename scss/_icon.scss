@@ -19,6 +19,7 @@ $menu:(
     display:flex;
     align-items:center;
     column-gap:10px;
+    justify-content: center;
     &:before {
         content:$code;
         font-family: "Font Awesome 6 Brands"; 

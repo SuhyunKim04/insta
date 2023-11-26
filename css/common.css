@@ -105,12 +105,10 @@ body {
 }
 
 .bar {
-  border: 1px solid rgba(129, 129, 129, 0.4);
   padding: 0 50px 20px;
-  border-radius: 1px;
   text-align: center;
   width: 100%;
-  max-width: 350px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -120,23 +118,30 @@ body {
 .login h1 {
   font-family: "Lobster", sans-serif;
   font-size: 45px;
-  margin: 36px 0;
+  margin: 42px 0;
 }
-.login form .login_form .info input, .login form .login_form .password input {
+.login .login_form input {
   width: 100%;
   padding: 9px 8px;
   background-color: rgb(250, 250, 250);
   font-size: 12px;
+  border-radius: 5px;
 }
-.login form .login_form .password {
+.login .login_form input:nth-child(1) {
+  margin-bottom: 12px;
+}
+.login .login_form input:nth-child(2) {
+  margin-bottom: 22px;
+}
+.login .login_form .password {
   margin-top: 10px;
 }
-.login form .login_form .blue {
+.login .login_form .blue {
   width: 100%;
-  background-color: #75B1E0;
+  background-color: #3797EF;
   padding: 10px 0;
   border-radius: 8px;
-  margin: 10px 0 20px;
+  margin: 30px 0 20px;
   color: #fff;
   font-weight: 600;
 }
@@ -161,7 +166,17 @@ body {
   width: 100%;
 }
 .login .face_book {
+  color: #3797EF;
   margin: 18px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.login .face_book:before {
+  content: "\f082";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 100;
 }
 .login .face_book .face_icon {
   font-size: 18px;
@@ -172,10 +187,12 @@ body {
 }
 .login .reset_pw {
   color: #00376B;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sign a {
-  color: #0095F6;
+  color: #3797EF;
   font-weight: 600;
 }
 
@@ -186,17 +203,6 @@ body {
 
 footer .bottom_icons {
   display: flex;
-}
-
-.face_book {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-}
-.face_book:before {
-  content: "\f082";
-  font-family: "Font Awesome 6 Brands";
-  font-weight: 100;
 }
 
 /*# sourceMappingURL=common.css.map */
