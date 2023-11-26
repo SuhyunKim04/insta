@@ -1,34 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Instagram";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/Instagram.woff) format("woff");
-}
-@font-face {
-  font-family: "Instagram bold";
-  font-style: normal;
-  font-weight: 600;
-  src: url(../fonts/Instagram\ Sans\ Bold.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Instagram light";
-  font-style: normal;
-  font-weight: 300;
-  src: url(../fonts/Instagram\ Sans\ Light.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Instagram medi";
-  font-style: normal;
-  font-weight: 500;
-  src: url(../fonts/Instagram\ Sans\ Medium.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Instagram sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/InstagramSans-Regular.woff) format("woff");
-}
 input {
   border: 1px solid #d8d8d8;
 }
@@ -122,10 +93,6 @@ select {
 }
 
 .testBox2 {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.testBox2 {
   width: 300px;
   height: auto;
   display: flex;
@@ -137,18 +104,21 @@ body {
   font-size: 14px;
 }
 
-.bor {
+.bar {
   border: 1px solid rgba(129, 129, 129, 0.4);
   padding: 0 50px 20px;
   border-radius: 1px;
   text-align: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .login {
-  margin: 32px 190px 0;
+  margin-bottom: 50px;
 }
 .login h1 {
-  font-family: "Instagram", sans-serif;
+  font-family: "Lobster", sans-serif;
   font-size: 45px;
   margin: 36px 0;
 }
@@ -204,10 +174,6 @@ body {
   color: #00376B;
 }
 
-.sign {
-  margin: 15px 190px 0;
-  padding: 20px 20px;
-}
 .sign a {
   color: #0095F6;
   font-weight: 600;

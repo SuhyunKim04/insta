@@ -39,13 +39,6 @@
     @include dim($p:absolute);
 }
 
-.testBox2 {
-    @include dim($p:null);
-}
-
-// .testBox2 {
-//     @include posFull;
-// }
 
 @mixin pos($p:absolute, $l:0, $t:0, $r:null, $b:null){
     position: $p;
@@ -59,16 +52,6 @@
     background: url($imgUrl + '#{$path}') no-repeat #{$p}/#{$s};
 }
 
-// @mixin before_after($margin-side,$before-after){
-//     &:#{$before-after} {
-//           height: $triangle-width;
-//           width: $triangle-width;
-//           content:"";
-//           position:absolute;
-//           margin-#{$margin-side}: -$triangle-width/2 -$stroke-width;
-//         }
-    
-// }
 
 @mixin posCenter($way:y, $pos:absolute){
     position: $p;
