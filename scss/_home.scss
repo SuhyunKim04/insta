@@ -1,0 +1,64 @@
+%base_wrap{ 
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+ 
+.all_wrap {
+    @extend %base_wrap;
+    padding:0 $gap; 
+}
+.top_header{
+    @extend %base_wrap;
+    @include flex;
+    background-color: red;
+    height: 88px;
+    padding: 0 22px 0 17px;
+    h2{
+        font-family: 'Lobster', sans-serif;
+        font-size: 24px;
+    }
+    .header_btns{
+        display: flex;
+    }
+}
+ 
+
+.story{
+    background-color: rgb(221, 221, 230);
+    height: 125px;
+    .story_list{
+        li{
+            width: 77px;
+            height: 77px;
+            position: relative;
+            @for $i from 1 through 7{
+                $file :  'profile_#{$i}';
+                &.#{$file}{
+                    @include bgCover('photo/' + $file + '.jpg');
+                }
+            }
+        }
+    }
+}
+
+.feed{
+
+    .feed_content{
+        // li{
+            
+        // }
+        .feed_header{
+            @include flex;
+            height: 54px;
+            img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+            // @include fontIcon(map-get($menu, heart));
+        }
+    }
+}
+
+ 

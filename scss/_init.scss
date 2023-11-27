@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 //경로변수 
-$url:'./images/';
+$url:'../images/';
 $icon: $url + 'icon/';
 $photo: $url + 'photo/';
 
@@ -9,6 +9,7 @@ $photo: $url + 'photo/';
 // font
 //
 
+$gap : 16px;
 
 
 @debug 4px * 6px; // 24px*px (read "square pixels")

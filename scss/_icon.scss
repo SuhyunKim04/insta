@@ -9,23 +9,43 @@ $menu:(
     plus:'\f0fe',
     video:'\f008',
     heart:'\f004',
-
+    msg:'\f075',
+    kebab:'\f142'
 );
 
 
 
 
-@mixin fontIcon($code:null, $style:null) { 
+@mixin fontIcon($code:null, $style:null, $type:'Free', $size: 21) { 
     display:flex;
     align-items:center;
     column-gap:10px;
     justify-content: center;
     &:before {
         content:$code;
-        font-family: "Font Awesome 6 Brands"; 
+        font-family: "Font Awesome 6 #{$type}"; 
         font-weight:100;
+        font-size: check($size);
         @if $style == 'bounce' {
             animation: fa-bounce 1s infinite cubic-bezier(.28,.84,.42,1) both;
         }
     }
+
+}
+
+// @mixin Icons($code: null, $style:null) {
+
+// }
+
+
+.ico_facebook {
+    @include fontIcon(map-get($sns, f), $type: 'Brands', $size:16);
+}
+
+.ico_msg{
+    @include fontIcon(map-get($menu, msg));
+}
+
+.ico_heart{
+    @include fontIcon(map-get($menu, heart));
 }

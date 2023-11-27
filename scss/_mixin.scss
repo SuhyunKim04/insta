@@ -49,7 +49,7 @@
 }
 
 @mixin bgCover($path: null, $p:center center, $s: cover){
-    background: url($imgUrl + '#{$path}') no-repeat #{$p}/#{$s};
+    background: url($url + '#{$path}') no-repeat #{$p}/#{$s};
 }
 
 
@@ -96,12 +96,12 @@
     }
 }
 
+
 @mixin blockBox($w:null, $h:null, $d:null) {
     width : check($w);
     height : check($h); 
     display:$d;
 }
-
 
 
 @mixin border($w:1, $s:solid, $c:#ddd) {

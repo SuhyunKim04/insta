@@ -1,20 +1,19 @@
-.bar{
-    padding: 0 50px 20px;
+
+.login_wrap {
+    max-width:600px;
+    margin:0 auto; 
+    height:100vh;
+    padding:0 34px;
+    @include flex($j: center,$d:column, $a:stretch);
+    row-gap: 50px;
     text-align: center;
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
-
-}
-.login{
-    margin-bottom: 50px;
-
+    
     h1{
         font-family: 'Lobster', sans-serif;
         font-size: 45px;
         margin: 42px 0;
     }
-
+    
         .login_form{
             input{
                 width: 100%;
@@ -43,7 +42,7 @@
                 font-weight: 600;
             }
         }
-
+    
     .login_or{
         color:#737373;
         font-weight: 600;
@@ -64,47 +63,29 @@
             width: 100%;
         }
     }
-
+    
     .face_book{
         color: #3797EF;
         margin: 18px 0;
-        @include fontIcon(map-get($sns, f));
         
-
-       .face_icon{
-        font-size: 18px;
-        display: block;
-       }
-       span{
-        display: block;
-       }
     }
     .reset_pw{
         color: #00376B;
         display: flex;
         justify-content: flex-end;
     }
-}
-
-.sign{
-    a{
-        color: #3797EF;
-        font-weight: 600;
+    .sign{
+        a{
+            color: #3797EF;
+            font-weight: 600;
+        }
     }
 }
 
-.app_box{
-    text-align: center;
-    margin: 10px 0;
-}
+ 
 
-footer{
-    .bottom_icons{
-        display: flex;
-    }
-
-}
-
+ 
+ 
 
 
 
