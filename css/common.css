@@ -242,7 +242,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
   height: 88px;
   padding: 0 22px 0 17px;
 }
@@ -255,13 +254,22 @@ body {
 }
 
 .story {
-  background-color: rgb(221, 221, 230);
-  height: 125px;
+  padding: 24px 0;
+}
+.story .story_list {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .story .story_list li {
   width: 77px;
   height: 77px;
   position: relative;
+  border-radius: 100%;
+  border: 1px solid #D9D9D9;
+  background-color: red;
 }
 .story .story_list li.profile_1 {
   background: url("../images/photo/profile_1.jpg") no-repeat center center/cover;
@@ -283,6 +291,9 @@ body {
 }
 .story .story_list li.profile_7 {
   background: url("../images/photo/profile_7.jpg") no-repeat center center/cover;
+}
+.story .story_list li.profile_8 {
+  background: url("../images/photo/profile_8.jpg") no-repeat center center/cover;
 }
 
 .feed .feed_content .feed_header {
