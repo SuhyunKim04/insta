@@ -29,48 +29,58 @@
     // height: 125px;
     padding: 24px 0 ;
     .story_list{
-        display: flex;
+        @include flex;
         overflow: hidden;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        
-        // transform: translateY(-50%);
+        column-gap: 12px;
        
         li{
             width: 77px;
             height: 77px;
             position: relative;
+            @include flex($j:center, $a: flex-end);
+            flex-shrink: 0;
+            border-radius: 100%;
+            // background-image: linear-gradient(white, white), linear-gradient(45deg, #F99848, #CC3C95);
             @for $i from 1 through 8{
                 $file :  'profile_#{$i}';
                 &.#{$file}{
                     @include bgCover('photo/' + $file + '.jpg');
                 }
             }
-            border-radius: 100%;
-            border: 1px solid #D9D9D9;
+            
+            
             // background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
             // box-sizing: content-box;
-            background-color: red;
         }
     }
 }
 
-.feed{
-
-    .feed_content{
-        // li{
-            
-        // }
-        .feed_header{
+.feed_container{
+    li{
+        .header{
             @include flex;
-            height: 54px;
-            img{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
+            padding: 10px 0;
+            margin-right: 20px;
+            .header_inside{
+                @include flex;
+                img{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 100%;
+                    margin-right:8px;
+                }
+                p{
+                    font-weight: 500;
+                }
             }
-            // @include fontIcon(map-get($menu, heart));
+        }
+        .body{
+            .tool_bar{
+                @include flex($j: flex-start);
+                .ico_msg_f{
+                    background: url($icon + 'message_flight.png') no-repeat center center/contain;
+                }
+            }
         }
     }
 }

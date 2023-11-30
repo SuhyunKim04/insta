@@ -123,6 +123,19 @@ select {
   font-size: check(21);
 }
 
+.ico_kebab {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_kebab:before {
+  content: "\f142";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 100;
+  font-size: check(21);
+}
+
 .box1 {
   width: 10px;
 }
@@ -258,18 +271,20 @@ body {
 }
 .story .story_list {
   display: flex;
-  overflow: hidden;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  column-gap: 12px;
 }
 .story .story_list li {
   width: 77px;
   height: 77px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-shrink: 0;
   border-radius: 100%;
-  border: 1px solid #D9D9D9;
-  background-color: red;
 }
 .story .story_list li.profile_1 {
   background: url("../images/photo/profile_1.jpg") no-repeat center center/cover;
@@ -296,16 +311,34 @@ body {
   background: url("../images/photo/profile_8.jpg") no-repeat center center/cover;
 }
 
-.feed .feed_content .feed_header {
+.feed_container li .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 54px;
+  padding: 10px 0;
+  margin-right: 20px;
 }
-.feed .feed_content .feed_header img {
+.feed_container li .header .header_inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feed_container li .header .header_inside img {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+.feed_container li .header .header_inside p {
+  font-weight: 500;
+}
+.feed_container li .body .tool_bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.feed_container li .body .tool_bar .ico_msg_f {
+  background: url("../images/icon/message_flight.png") no-repeat center center/contain;
 }
 
 /*# sourceMappingURL=common.css.map */

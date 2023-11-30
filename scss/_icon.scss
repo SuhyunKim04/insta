@@ -49,3 +49,11 @@ $menu:(
 .ico_heart{
     @include fontIcon(map-get($menu, heart));
 }
+
+.ico_kebab{
+    @include fontIcon(map-get($menu, kebab));
+}
+
+// .ico_msg_f{
+//     @include fontIcon(background-image:url($url + '#{$path}.png'););
+// }
