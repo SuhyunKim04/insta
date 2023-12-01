@@ -14,7 +14,9 @@ $menu:(
     plane:'\f1d8',
     arrowdown:'\f107',
     hamburger:'\f0c9',
-    userplus:'\f234'
+    userplus:'\f234',
+    tablecells: '\f00a',
+    user:'\f2bd'
 );
 
 
@@ -86,4 +88,11 @@ $menu:(
 
 .ico_userplus{
     @include fontIcon(map-get($menu, userplus), $type:'solid');
+}
+
+.ico_tablecells{
+    @include fontIcon(map-get($menu, tablecells), $type:'solid');
+}
+.ico_user{
+    @include fontIcon(map-get($menu, user));
 }

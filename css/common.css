@@ -240,6 +240,32 @@ select {
   font-size: check(21);
 }
 
+.ico_tablecells {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_tablecells:before {
+  content: "\f00a";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_user {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_user:before {
+  content: "\f2bd";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 100;
+  font-size: check(21);
+}
+
 .box1 {
   width: 10px;
 }
@@ -490,6 +516,9 @@ body {
   height: 82px;
   border-radius: 100%;
 }
+.account_info div {
+  text-align: center;
+}
 
 .account_btns {
   display: flex;
@@ -501,6 +530,41 @@ body {
   background-color: aliceblue;
   padding: 8px 40px;
   font-weight: 500;
+}
+
+.story_diy {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 22px;
+  height: 100px;
+}
+.story_diy .story_item {
+  text-align: center;
+}
+.story_diy .story_item img {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+}
+.story_diy .story_item span {
+  display: block;
+}
+
+.account_feed_icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0 12px 0;
+}
+
+.feed_photo {
+  position: relative;
+}
+.feed_photo li {
+  width: 125px;
+  height: 125px;
 }
 
 /*# sourceMappingURL=common.css.map */

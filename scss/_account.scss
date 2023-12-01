@@ -15,6 +15,9 @@
     img{
         @include borderRadius(82px, 82px);
     }
+    div{
+        text-align: center;
+    }
 }
 
 .account_btns{
@@ -26,4 +29,35 @@
         font-weight: 500;
     }
     
+}
+
+.story_diy{
+    margin-top: 14px;
+    @include flex($j:flex-start);
+    column-gap: 22px;
+    height: 100px;
+    .story_item{
+        text-align: center;
+        img{
+            @include borderRadius(65px, 65px);
+        }
+        span{
+            display: block;
+        }
+
+    }
+}
+
+.account_feed_icons{
+    @include flex($j:space-around);
+    margin: 20px 0 12px 0;
+}
+
+.feed_photo{
+    position: relative;
+    li{
+        width: 125px;
+        height: 125px;
+        
+    }
 }
