@@ -1,0 +1,29 @@
+.account_header{
+    @include flex;
+    height: 56px;
+    .account_name{
+        @include flex;
+    }
+    .account_header_btns{
+        @include flex;
+    }
+}
+
+
+.account_info{
+    @include flex;
+    img{
+        @include borderRadius(82px, 82px);
+    }
+}
+
+.account_btns{
+    @include flex;
+    margin-top: 15px;
+    .btn_color{
+        background-color: aliceblue;
+        padding: 8px 40px;
+        font-weight: 500;
+    }
+    
+}

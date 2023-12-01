@@ -25,12 +25,16 @@
  
 
 .story{
+    
     // background-color: rgb(221, 221, 230);
     // height: 125px;
     padding: 24px 0 ;
     .story_list{
+        &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
         @include flex;
-        overflow: hidden;
+        overflow: auto;
         column-gap: 12px;
        
         li{
@@ -54,7 +58,14 @@
         }
     }
 }
-
+.both{
+    img{
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        margin-right:8px;
+    }
+}
 .feed_container{
     li{
         .header{
@@ -63,26 +74,29 @@
             margin-right: 20px;
             .header_inside{
                 @include flex;
-                img{
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 100%;
-                    margin-right:8px;
-                }
+                
                 p{
                     font-weight: 500;
                 }
             }
+            
         }
         .body{
             .tool_bar{
                 @include flex($j: flex-start);
-                .ico_msg_f{
-                    background: url($icon + 'message_flight.png') no-repeat center center/contain;
-                }
+                margin-bottom:16px;
+            }
+            p{
+                margin-left:6px;
+            }
+
+            .contents{
+                margin-left:6px;
             }
         }
     }
 }
+
+
 
  

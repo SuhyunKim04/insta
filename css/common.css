@@ -131,7 +131,111 @@ select {
 }
 .ico_kebab:before {
   content: "\f142";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_msg_f {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_msg_f:before {
+  content: "\f1d8";
   font-family: "Font Awesome 6 Free";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_home {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_home:before {
+  content: "\f015";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_search {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_search:before {
+  content: "\f002";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_plus {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_plus:before {
+  content: "\f0fe";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_video {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_video:before {
+  content: "\f008";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_arrowdown {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_arrowdown:before {
+  content: "\f107";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_hamburger {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_hamburger:before {
+  content: "\f0c9";
+  font-family: "Font Awesome 6 solid";
+  font-weight: 100;
+  font-size: check(21);
+}
+
+.ico_userplus {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_userplus:before {
+  content: "\f234";
+  font-family: "Font Awesome 6 solid";
   font-weight: 100;
   font-size: check(21);
 }
@@ -163,6 +267,16 @@ select {
 body {
   font-family: "Instagram sans", sans-serif;
   font-size: 14px;
+}
+
+.tabbar_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 26px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .login_wrap {
@@ -273,8 +387,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
   column-gap: 12px;
+}
+.story .story_list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .story .story_list li {
   width: 77px;
@@ -311,6 +428,13 @@ body {
   background: url("../images/photo/profile_8.jpg") no-repeat center center/cover;
 }
 
+.both img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
 .feed_container li .header {
   display: flex;
   justify-content: space-between;
@@ -323,12 +447,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.feed_container li .header .header_inside img {
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
-  margin-right: 8px;
-}
 .feed_container li .header .header_inside p {
   font-weight: 500;
 }
@@ -336,9 +454,53 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 16px;
 }
-.feed_container li .body .tool_bar .ico_msg_f {
-  background: url("../images/icon/message_flight.png") no-repeat center center/contain;
+.feed_container li .body p {
+  margin-left: 6px;
+}
+.feed_container li .body .contents {
+  margin-left: 6px;
+}
+
+.account_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+.account_header .account_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account_header .account_header_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account_info img {
+  width: 82px;
+  height: 82px;
+  border-radius: 100%;
+}
+
+.account_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.account_btns .btn_color {
+  background-color: aliceblue;
+  padding: 8px 40px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=common.css.map */

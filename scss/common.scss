@@ -1,30 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-// @font-face {
-//     font-family: 'Instagram bold';
-//     font-style: normal;
-//     font-weight: 600;
-//     src:url(../fonts/Instagram\ Sans\ Bold.ttf) format('truetype')
-// }
-// @font-face {
-//     font-family: 'Instagram light';
-//     font-style: normal;
-//     font-weight: 300;
-//     src:url(../fonts/Instagram\ Sans\ Light.ttf)format('truetype')
-// }
-// @font-face {
-//     font-family: 'Instagram medi';
-//     font-style: normal;
-//     font-weight: 500;
-//     src:url(../fonts/Instagram\ Sans\ Medium.ttf) format('truetype')
-// }
-// @font-face {
-//     font-family: 'Instagram sans';
-//     font-style: normal;
-//     font-weight: 400;
-//     src:url(../fonts/InstagramSans-Regular.woff) format('woff');
-// }
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import 'init','reset','icon','function','mixin'; 
@@ -33,5 +9,12 @@ body{
     font-family: 'Instagram sans', sans-serif;
     font-size: 14px;
 }
+.tabbar_menu{
+    @include flex;
+    padding: 0 26px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-@import 'index','home'; 
+@import 'index','home','account'; 

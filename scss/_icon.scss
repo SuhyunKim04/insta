@@ -10,7 +10,11 @@ $menu:(
     video:'\f008',
     heart:'\f004',
     msg:'\f075',
-    kebab:'\f142'
+    kebab:'\f142',
+    plane:'\f1d8',
+    arrowdown:'\f107',
+    hamburger:'\f0c9',
+    userplus:'\f234'
 );
 
 
@@ -51,9 +55,35 @@ $menu:(
 }
 
 .ico_kebab{
-    @include fontIcon(map-get($menu, kebab));
+    @include fontIcon(map-get($menu, kebab), $type: 'solid');
 }
 
-// .ico_msg_f{
-//     @include fontIcon(background-image:url($url + '#{$path}.png'););
-// }
+.ico_msg_f{
+    @include fontIcon(map-get($menu, plane));
+}
+
+.ico_home{
+    @include fontIcon(map-get($menu, home), $type: 'solid');
+}
+
+.ico_search{
+    @include fontIcon(map-get($menu, search), $type: 'solid');
+}
+
+.ico_plus{
+    @include fontIcon(map-get($menu, plus));
+}
+.ico_video{
+    @include fontIcon(map-get($menu, video), $type:'solid');
+}
+.ico_arrowdown{
+    @include fontIcon(map-get($menu, arrowdown), $type:'solid');
+}
+
+.ico_hamburger{
+    @include fontIcon(map-get($menu, hamburger), $type:'solid');
+}
+
+.ico_userplus{
+    @include fontIcon(map-get($menu, userplus), $type:'solid');
+}

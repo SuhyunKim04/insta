@@ -119,6 +119,11 @@
     }
 }
 
+@mixin borderRadius($w:null, $h:null) {
+    width:check($w);
+    height:check($h);
+    border-radius: 100%;
+}
 
 .testBox2 {
     @include blockBox(300, auto, flex);
