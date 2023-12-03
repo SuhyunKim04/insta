@@ -527,9 +527,10 @@ body {
   margin-top: 15px;
 }
 .account_btns .btn_color {
-  background-color: aliceblue;
+  background-color: #d9d9d9;
   padding: 8px 40px;
   font-weight: 500;
+  border-radius: 10px;
 }
 
 .story_diy {
@@ -560,11 +561,27 @@ body {
 }
 
 .feed_photo {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  margin-top: 12px;
 }
-.feed_photo li {
-  width: 125px;
-  height: 125px;
+
+.search_contain {
+  margin-top: 40px;
+}
+.search_contain input {
+  width: 100%;
+  background-color: #d9d9d9;
+  height: 28px;
+  width: 100%;
+  height: 28px;
+  border-radius: 10px;
+}
+
+.search_photo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /*# sourceMappingURL=common.css.map */

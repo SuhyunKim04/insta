@@ -1,0 +1,15 @@
+.search_contain{
+    margin-top: 40px;
+    input{
+        width: 100%;
+        background-color: #d9d9d9;
+        height: 28px;
+        @include borderRadius(100%, 28px, 10px)
+    }
+}
+
+.search_photo{
+    // @include grid($gtc:(repeat(3,1fr)));
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

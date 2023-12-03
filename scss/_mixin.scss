@@ -119,10 +119,10 @@
     }
 }
 
-@mixin borderRadius($w:null, $h:null) {
+@mixin borderRadius($w:null, $h:null, $b:100%) {
     width:check($w);
     height:check($h);
-    border-radius: 100%;
+    border-radius: check($b)
 }
 
 .testBox2 {

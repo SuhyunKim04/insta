@@ -24,9 +24,10 @@
     @include flex;
     margin-top: 15px;
     .btn_color{
-        background-color: aliceblue;
+        background-color: #d9d9d9;
         padding: 8px 40px;
         font-weight: 500;
+        border-radius: 10px;
     }
     
 }
@@ -54,10 +55,8 @@
 }
 
 .feed_photo{
-    position: relative;
-    li{
-        width: 125px;
-        height: 125px;
-        
-    }
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 2px; 
+    margin-top: 12px;
 }
