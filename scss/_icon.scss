@@ -22,15 +22,21 @@ $menu:(
 
 
 
-@mixin fontIcon($code:null, $style:null, $type:'Free', $size: 21) { 
+@mixin fontIcon($code:null, $style:null, $family:'Free', $size: 24) { 
     display:flex;
     align-items:center;
     column-gap:10px;
     justify-content: center;
+
+    @if $family == 'Pro' { 
+        &:before{
+            font-weight:900
+        }
+    }
     &:before {
         content:$code;
-        font-family: "Font Awesome 6 #{$type}"; 
-        font-weight:100;
+        font-family: "Font Awesome 6 #{$family}"; 
+        @debug check(30);
         font-size: check($size);
         @if $style == 'bounce' {
             animation: fa-bounce 1s infinite cubic-bezier(.28,.84,.42,1) both;
@@ -45,7 +51,7 @@ $menu:(
 
 
 .ico_facebook {
-    @include fontIcon(map-get($sns, f), $type: 'Brands', $size:16);
+    @include fontIcon(map-get($sns, f), $family: 'Brands', $size:16);
 }
 
 .ico_msg{
@@ -57,7 +63,7 @@ $menu:(
 }
 
 .ico_kebab{
-    @include fontIcon(map-get($menu, kebab), $type: 'solid');
+    @include fontIcon(map-get($menu, kebab), $family: 'Pro');
 }
 
 .ico_msg_f{
@@ -65,33 +71,33 @@ $menu:(
 }
 
 .ico_home{
-    @include fontIcon(map-get($menu, home), $type: 'solid');
+    @include fontIcon(map-get($menu, home), $family: 'Pro');
 }
 
 .ico_search{
-    @include fontIcon(map-get($menu, search), $type: 'solid');
+    @include fontIcon(map-get($menu, search), $family: 'Pro');
 }
 
 .ico_plus{
-    @include fontIcon(map-get($menu, plus));
+    @include fontIcon(map-get($menu, plus),$size:22);
 }
 .ico_video{
-    @include fontIcon(map-get($menu, video), $type:'solid');
+    @include iconBg('tab_video');
 }
 .ico_arrowdown{
-    @include fontIcon(map-get($menu, arrowdown), $type:'solid');
+    @include fontIcon(map-get($menu, arrowdown), $family:'Pro');
 }
 
 .ico_hamburger{
-    @include fontIcon(map-get($menu, hamburger), $type:'solid');
+    @include fontIcon(map-get($menu, hamburger), $family:'Pro');
 }
 
 .ico_userplus{
-    @include fontIcon(map-get($menu, userplus), $type:'solid');
+    @include fontIcon(map-get($menu, userplus), $family:'Pro');
 }
 
 .ico_tablecells{
-    @include fontIcon(map-get($menu, tablecells), $type:'solid');
+    @include fontIcon(map-get($menu, tablecells), $family:'Pro');
 }
 .ico_user{
     @include fontIcon(map-get($menu, user));

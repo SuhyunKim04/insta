@@ -35,8 +35,12 @@
 
 .testBox { 
     @debug 'check2 : ' + check2(auto);
-
+    
+    @debug 'check' + check(30)
 }
+
+
+ 
 
 @mixin pCenter($w, $h, $p: absolute) {
     @if true

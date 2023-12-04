@@ -84,188 +84,6 @@ select {
   overflow: hidden;
 }
 
-.ico_facebook {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_facebook:before {
-  content: "\f082";
-  font-family: "Font Awesome 6 Brands";
-  font-weight: 100;
-  font-size: check(16);
-}
-
-.ico_msg {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_msg:before {
-  content: "\f075";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_heart {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_heart:before {
-  content: "\f004";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_kebab {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_kebab:before {
-  content: "\f142";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_msg_f {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_msg_f:before {
-  content: "\f1d8";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_home {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_home:before {
-  content: "\f015";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_search {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_search:before {
-  content: "\f002";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_plus {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_plus:before {
-  content: "\f0fe";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_video {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_video:before {
-  content: "\f008";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_arrowdown {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_arrowdown:before {
-  content: "\f107";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_hamburger {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_hamburger:before {
-  content: "\f0c9";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_userplus {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_userplus:before {
-  content: "\f234";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_tablecells {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_tablecells:before {
-  content: "\f00a";
-  font-family: "Font Awesome 6 solid";
-  font-weight: 100;
-  font-size: check(21);
-}
-
-.ico_user {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_user:before {
-  content: "\f2bd";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 100;
-  font-size: check(21);
-}
-
 .box1 {
   width: 10px;
 }
@@ -290,19 +108,210 @@ select {
   border: 1px solid red;
 }
 
+.ico_facebook {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_facebook:before {
+  content: "\f082";
+  font-family: "Font Awesome 6 Brands";
+  font-size: 16px;
+}
+
+.ico_msg {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_msg:before {
+  content: "\f075";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+}
+
+.ico_heart {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_heart:before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+}
+
+.ico_kebab {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_kebab:before {
+  font-weight: 900;
+}
+.ico_kebab:before {
+  content: "\f142";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_msg_f {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_msg_f:before {
+  content: "\f1d8";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+}
+
+.ico_home {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_home:before {
+  font-weight: 900;
+}
+.ico_home:before {
+  content: "\f015";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_search {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_search:before {
+  font-weight: 900;
+}
+.ico_search:before {
+  content: "\f002";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_plus {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_plus:before {
+  content: "\f0fe";
+  font-family: "Font Awesome 6 Free";
+  font-size: 22px;
+}
+
+.ico_video {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_video.svg");
+}
+
+.ico_arrowdown {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_arrowdown:before {
+  font-weight: 900;
+}
+.ico_arrowdown:before {
+  content: "\f107";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_hamburger {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_hamburger:before {
+  font-weight: 900;
+}
+.ico_hamburger:before {
+  content: "\f0c9";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_userplus {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_userplus:before {
+  font-weight: 900;
+}
+.ico_userplus:before {
+  content: "\f234";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_tablecells {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_tablecells:before {
+  font-weight: 900;
+}
+.ico_tablecells:before {
+  content: "\f00a";
+  font-family: "Font Awesome 6 Pro";
+  font-size: 24px;
+}
+
+.ico_user {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.ico_user:before {
+  content: "\f2bd";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+}
+
 body {
   font-family: "Instagram sans", sans-serif;
   font-size: 14px;
 }
 
-.tabbar_menu {
+.tabbar_menu ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 26px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  height: 74px;
+}
+.tabbar_menu ul li {
+  flex-basis: 20%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.tabbar_menu ul li:hover {
+  color: red;
 }
 
 .login_wrap {

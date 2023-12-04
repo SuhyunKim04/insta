@@ -73,7 +73,7 @@
     overflow: hidden;
 }
 
-@mixin iconBg($path, $size:24, $start:null, $end:null) {
+@mixin iconBg($path, $size:24, $start:null, $end:null, $type:svg) {
     display:block; 
     background: no-repeat center center/contain;
     $size : check($size);
@@ -84,13 +84,13 @@
     @debug ($start == null);
 
     @if ( $start == null) {
-        background-image:url($url + '#{$path}.png');
+        background-image:url($icon + '#{$path}.#{$type}');
 
          
     } @else {
         @for $i from $start through $end {
             &:nth-child(#{$i}) {
-                background-image:url($url + '#{$path}#{$i}.png');
+                background-image:url($icon + '#{$path}#{$i}.#{$type}');
             }
         }
     }
