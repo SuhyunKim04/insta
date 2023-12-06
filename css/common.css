@@ -178,6 +178,13 @@ select {
   height: 24px;
   background-image: url("../images/icon/tab_home.svg");
 }
+.ico_home:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_home_red.svg");
+}
 
 .ico_search {
   display: block;
@@ -186,17 +193,27 @@ select {
   height: 24px;
   background-image: url("../images/icon/tab_search.svg");
 }
-
-.ico_plus {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
+.ico_search:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_search_red.svg");
 }
-.ico_plus:before {
-  content: "\f0fe";
-  font-family: "Font Awesome 6 Free";
-  font-size: 22px;
+
+.ico_create {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_create.svg");
+}
+.ico_create:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_create_red.svg");
 }
 
 .ico_video {
@@ -205,6 +222,13 @@ select {
   width: 24px;
   height: 24px;
   background-image: url("../images/icon/tab_video.svg");
+}
+.ico_video:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_video_red.svg");
 }
 
 .ico_arrowdown {
@@ -222,6 +246,21 @@ select {
   font-size: 24px;
 }
 
+.ico_feed {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/feed.svg");
+}
+.ico_feed:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/feed_red.svg");
+}
+
 .ico_hamburger {
   display: flex;
   align-items: center;
@@ -237,19 +276,19 @@ select {
   font-size: 24px;
 }
 
-.ico_userplus {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
+.ico_show_user {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/show_user.svg");
 }
-.ico_userplus:before {
-  font-weight: 900;
-}
-.ico_userplus:before {
-  content: "\f234";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+.ico_show_user:hover {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/show_user_red.svg");
 }
 
 .ico_tablecells {
@@ -499,6 +538,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 12px;
 }
 
 .account_info {

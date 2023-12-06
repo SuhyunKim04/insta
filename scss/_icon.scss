@@ -71,28 +71,49 @@ $menu:(
 
 .ico_home{
     @include iconBg('tab_home');
+    &:hover{
+        @include iconBg('tab_home_red');
+    }
 }
 
 .ico_search{
     @include iconBg('tab_search');
+    &:hover{
+        @include iconBg('tab_search_red');
+    }
 }
 
-.ico_plus{
-    @include fontIcon(map-get($menu, plus),$size:22);
+.ico_create{
+    @include iconBg('tab_create');
+    &:hover{
+        @include iconBg('tab_create_red');
+    }
 }
 .ico_video{
     @include iconBg('tab_video');
+    &:hover{
+        @include iconBg('tab_video_red');
+    }
 }
 .ico_arrowdown{
     @include fontIcon(map-get($menu, arrowdown), $family:'Pro');
+}
+.ico_feed{
+    @include iconBg('feed');
+    &:hover{
+        @include iconBg('feed_red');
+    }
 }
 
 .ico_hamburger{
     @include fontIcon(map-get($menu, hamburger), $family:'Pro');
 }
 
-.ico_userplus{
-    @include fontIcon(map-get($menu, userplus), $family:'Pro');
+.ico_show_user{
+    @include iconBg('show_user');
+    &:hover{
+        @include iconBg('show_user_red');
+    }
 }
 
 .ico_tablecells{
@@ -101,3 +122,4 @@ $menu:(
 .ico_user{
     @include fontIcon(map-get($menu, user));
 }
+
