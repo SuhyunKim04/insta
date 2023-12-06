@@ -12,8 +12,8 @@ $photo: $url + 'photo/';
 $gap : 16px;
 
 
-@debug 4px * 6px; // 24px*px (read "square pixels")
-@debug math.div(5px, 2s); // 2.5px/s (read "pixels per second")
+// @debug 4px * 6px; // 24px*px (read "square pixels")
+// @debug math.div(5px, 2s); // 2.5px/s (read "pixels per second")
 
 
 $text : #222, #666, #999; // list

@@ -18,9 +18,11 @@ body{
             text-align: center;
             display: flex;
             justify-content: center;
+            a{
+                &:hover{
+                    color: $active;
+                }
 
-            &:hover{
-                color: $active;
             }
         }
     }

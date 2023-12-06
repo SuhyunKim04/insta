@@ -81,7 +81,7 @@
     width:$size;
     height:$size;
 
-    @debug ($start == null);
+    // @debug ($start == null);
 
     @if ( $start == null) {
         background-image:url($icon + '#{$path}.#{$type}');

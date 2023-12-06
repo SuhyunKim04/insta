@@ -172,33 +172,19 @@ select {
 }
 
 .ico_home {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_home:before {
-  font-weight: 900;
-}
-.ico_home:before {
-  content: "\f015";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_home.svg");
 }
 
 .ico_search {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_search:before {
-  font-weight: 900;
-}
-.ico_search:before {
-  content: "\f002";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tab_search.svg");
 }
 
 .ico_plus {
@@ -310,7 +296,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.tabbar_menu ul li:hover {
+.tabbar_menu ul li a:hover {
   color: red;
 }
 

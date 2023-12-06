@@ -36,7 +36,6 @@ $menu:(
     &:before {
         content:$code;
         font-family: "Font Awesome 6 #{$family}"; 
-        @debug check(30);
         font-size: check($size);
         @if $style == 'bounce' {
             animation: fa-bounce 1s infinite cubic-bezier(.28,.84,.42,1) both;
@@ -71,11 +70,11 @@ $menu:(
 }
 
 .ico_home{
-    @include fontIcon(map-get($menu, home), $family: 'Pro');
+    @include iconBg('tab_home');
 }
 
 .ico_search{
-    @include fontIcon(map-get($menu, search), $family: 'Pro');
+    @include iconBg('tab_search');
 }
 
 .ico_plus{
