@@ -56,20 +56,11 @@
                 }
             }
            
-            // @for $i from 1 through 8{
-            //     $file :  'profile_#{$i}';
-            //     &.#{$file} a{
-            //         @include bgCover('photo/' + $file + '.jpg');
-            //     }
-            // }
             a{
                 display: block;
                 width:100%;
+                text-align: center;
             }
-            
-            
-            // background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
-            // box-sizing: content-box;
         }
     }
 }
@@ -110,6 +101,10 @@
             }
         }
     }
+}
+
+.comment_popup{
+    margin-left: 6px;
 }
 
 

@@ -476,6 +476,7 @@ body {
 .story .story_list li a {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 .both img {
@@ -510,6 +511,10 @@ body {
   margin-left: 6px;
 }
 .feed_container li .body .contents {
+  margin-left: 6px;
+}
+
+.comment_popup {
   margin-left: 6px;
 }
 
