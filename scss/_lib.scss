@@ -4,10 +4,20 @@
 .slide_container{
     .slick-dots{
         bottom:25px;
+        li{
+            button{
+                content:'';
+                background-color: #000;
+                border-radius: 50%;;
+                width:2px;
+                height:2px;
+            }
+        }
     }
     
     .slick-dotted.slick-slider{
         margin-bottom: 0;
     }
+
 
 }

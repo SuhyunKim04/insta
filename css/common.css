@@ -870,6 +870,13 @@ body {
 .slide_container .slick-dots {
   bottom: 25px;
 }
+.slide_container .slick-dots li button {
+  content: "";
+  background-color: #000;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+}
 .slide_container .slick-dotted.slick-slider {
   margin-bottom: 0;
 }
