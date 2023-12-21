@@ -1,0 +1,13 @@
+@import './lib/slick';
+@import './lib/slick-theme';
+
+.slide_container{
+    .slick-dots{
+        bottom:25px;
+    }
+    
+    .slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
+
+}

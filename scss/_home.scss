@@ -42,17 +42,24 @@
             @include flex($j:center, $a: flex-end);
             flex-shrink: 0;
             
-            .photo_box{
+            .photo_ring{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
                 height: 66px;
                 background: url($url + 'profile_ring.svg') no-repeat center center/contain;
-                img{
+                .photo_box{
                     height: 56px;
                     width: 56px;
                     border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                
                 }
             }
            
@@ -88,9 +95,11 @@
             
         }
         .body{
+
             .tool_bar{
                 @include flex($j: flex-start);
-                margin-bottom:16px;
+                height: 40px;
+                margin: 4px 0;
             }
             p{
                 margin-left:6px;
