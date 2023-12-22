@@ -6,12 +6,23 @@
         bottom:25px;
         li{
             margin:0;
+
             button{
-                content:'';
-                background-color: #000;
+                background-color: #fff;
                 border-radius: 50%;;
                 width:2px;
                 height:2px;
+                opacity: 0.5;
+                
+                &:before{
+                    content:'';
+                    display: none;
+                }
+                
+            }
+
+            &.slick-active button {
+                opacity:1;
             }
         }
     }

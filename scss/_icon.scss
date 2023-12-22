@@ -99,7 +99,7 @@ $menu:(
     @include fontIcon(map-get($menu, arrowdown), $family:'Pro');
 }
 .ico_feed{
-    @include iconBg('feed');
+    @include iconBg('feed_2');
     &:hover{
         @include iconBg('feed_red');
     }

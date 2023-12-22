@@ -6,7 +6,6 @@
  
 .all_wrap {
     @extend %base_wrap;
-    padding:0 $gap; 
 }
 .top_header{
     @extend %base_wrap;
@@ -128,10 +127,27 @@
         }
     }
 }
+.feed_contents{
+    display: flex;
+}
 
-.comments{
+.modal_cmt_container{
+    background-color: rgb(156, 255, 107);
+    border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    max-width: 600px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.cmt_list{
     outline: 1px solid salmon;
-    margin-top: 92px;
+    padding: 0 10px;
+    height: 50vh;
+    overflow-y:auto;
+    
     h3{
         text-align: center;
         font-weight: 600;
@@ -156,6 +172,8 @@
 .acc{
     outline: 1px solid saddlebrown;
     margin-right: 20px;
+    @include flex($j: flex-start);
+
     a{
         width: 61px;
         height: 61px;
