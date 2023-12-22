@@ -19,16 +19,13 @@
     }
     .header_btns{
         display: flex;
-        column-gap: 10px;
+        column-gap: 26px;
     }
 }
  
 
 .story{
-    
-    // background-color: rgb(221, 221, 230);
-    // height: 125px;
-    padding: 24px 0 ;
+    padding: 18px 0 ;
     .story_list{
         &::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -85,6 +82,7 @@
             @include flex;
             padding: 10px 0;
             margin-right: 20px;
+            margin-left:16px;
             .header_inside{
                 @include flex;
                 
@@ -132,7 +130,7 @@
 }
 
 .modal_cmt_container{
-    background-color: rgb(156, 255, 107);
+    background-color: #fff;
     border-radius: 20px 20px 0 0;
     position: fixed;
     bottom:0;
@@ -151,6 +149,13 @@
     h3{
         text-align: center;
         font-weight: 600;
+        padding-top:50px;
+        &::before{
+            content:'';
+            width: 33px;
+            background-color: #737171;
+            height: 4px;
+        }
     }
     ul{
         display: block;
@@ -163,20 +168,20 @@
         }
         .comments_acc{
             display: flex;
-            
+            padding-bottom: 22px;
         }
     }
     
 }
 
 .acc{
-    outline: 1px solid saddlebrown;
     margin-right: 20px;
     @include flex($j: flex-start);
+    
 
     a{
-        width: 61px;
-        height: 61px;
+        width: 33px;
+        height: 33px;
         border-radius: 50%;
         overflow: hidden;
         display: block;
@@ -185,6 +190,13 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+}
+
+.chat{
+    margin: 0 16px;
+    .text_area{
+        margin-left:18px;
     }
 }
 .acc_detail{
@@ -199,6 +211,15 @@
     button{
         color:#A0A0A0;
         font-weight: 600;
+    }
+}
+
+.cmt_write{
+    .emojis{
+        button{
+            width: 42px;
+            height: 42px;
+        }
     }
 }
 

@@ -62,7 +62,7 @@ $menu:(
 }
 
 .ico_kebab{
-    @include fontIcon(map-get($menu, kebab), $family: 'Pro');
+    @include iconBg('kebab');
 }
 
 .ico_msg_f{
@@ -96,17 +96,17 @@ $menu:(
     }
 }
 .ico_arrowdown{
-    @include fontIcon(map-get($menu, arrowdown), $family:'Pro');
+    @include iconBg('arrow_down');
 }
 .ico_feed{
-    @include iconBg('feed_2');
+    @include iconBg('feed');
     &:hover{
         @include iconBg('feed_red');
     }
 }
 
 .ico_hamburger{
-    @include fontIcon(map-get($menu, hamburger), $family:'Pro');
+    @include iconBg('ham');
 }
 
 .ico_show_user{

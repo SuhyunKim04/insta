@@ -147,18 +147,11 @@ select {
 }
 
 .ico_kebab {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_kebab:before {
-  font-weight: 900;
-}
-.ico_kebab:before {
-  content: "\f142";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/kebab.svg");
 }
 
 .ico_msg_f {
@@ -234,18 +227,11 @@ select {
 }
 
 .ico_arrowdown {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_arrowdown:before {
-  font-weight: 900;
-}
-.ico_arrowdown:before {
-  content: "\f107";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/arrow_down.svg");
 }
 
 .ico_feed {
@@ -253,7 +239,7 @@ select {
   background: no-repeat center center/contain;
   width: 24px;
   height: 24px;
-  background-image: url("../images/icon/feed_2.svg");
+  background-image: url("../images/icon/feed.svg");
 }
 .ico_feed:hover {
   display: block;
@@ -264,18 +250,11 @@ select {
 }
 
 .ico_hamburger {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_hamburger:before {
-  font-weight: 900;
-}
-.ico_hamburger:before {
-  content: "\f0c9";
-  font-family: "Font Awesome 6 Pro";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/ham.svg");
 }
 
 .ico_show_user {
@@ -436,11 +415,11 @@ body {
 }
 .top_header .header_btns {
   display: flex;
-  column-gap: 10px;
+  column-gap: 26px;
 }
 
 .story {
-  padding: 24px 0;
+  padding: 18px 0;
 }
 .story .story_list {
   display: flex;
@@ -497,6 +476,7 @@ body {
   align-items: center;
   padding: 10px 0;
   margin-right: 20px;
+  margin-left: 16px;
 }
 .feed_container li .header .header_inside {
   display: flex;
@@ -539,7 +519,7 @@ body {
 }
 
 .modal_cmt_container {
-  background-color: rgb(156, 255, 107);
+  background-color: #fff;
   border-radius: 20px 20px 0 0;
   position: fixed;
   bottom: 0;
@@ -558,6 +538,13 @@ body {
 .cmt_list h3 {
   text-align: center;
   font-weight: 600;
+  padding-top: 50px;
+}
+.cmt_list h3::before {
+  content: "";
+  width: 33px;
+  background-color: #737171;
+  height: 4px;
 }
 .cmt_list ul {
   display: block;
@@ -570,18 +557,18 @@ body {
 }
 .cmt_list ul .comments_acc {
   display: flex;
+  padding-bottom: 22px;
 }
 
 .acc {
-  outline: 1px solid saddlebrown;
   margin-right: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .acc a {
-  width: 61px;
-  height: 61px;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
   overflow: hidden;
   display: block;
@@ -590,6 +577,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.chat {
+  margin: 0 16px;
+}
+.chat .text_area {
+  margin-left: 18px;
 }
 
 .acc_detail a {
@@ -605,11 +599,17 @@ body {
   font-weight: 600;
 }
 
+.cmt_write .emojis button {
+  width: 42px;
+  height: 42px;
+}
+
 .account_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 56px;
+  margin: 0 22px 0 16px;
 }
 .account_header .account_name {
   display: flex;
@@ -627,6 +627,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 15px 30px 0 22px;
 }
 .account_info img {
   width: 82px;
@@ -637,21 +638,34 @@ body {
   text-align: center;
 }
 
+.content {
+  margin-left: 16px;
+}
+
 .account_btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin: 15px 12px 0;
+  white-space: nowrap;
+  column-gap: 6px;
 }
 .account_btns .btn_color {
   background-color: #d9d9d9;
-  padding: 8px 40px;
   font-weight: 500;
   border-radius: 10px;
 }
+.account_btns a {
+  width: 152px;
+  height: 34px;
+  text-align: center;
+}
+.account_btns button {
+  width: 32px;
+}
 
 .story_diy {
-  margin-top: 14px;
+  margin: 14px 0 0 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -682,6 +696,17 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2px;
   margin-top: 12px;
+  grid-row-gap: 2px;
+}
+.feed_photo li {
+  width: 126px;
+  height: 126px;
+  overflow: hidden;
+}
+.feed_photo li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .search_contain {
