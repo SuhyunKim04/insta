@@ -15,9 +15,12 @@ const modal_cmt = () =>{
   const dim = document.querySelector('.dim');
 
   //open_modal
-
-
-
+  // open_cmt.addEventListenr('click',(e) => {
+  //   modal_container.
+  // })
 
   //close_modal
+//댓글창 all view 클릭해도 열리고 icon을 클릭해도 열리고
+//dim 클릭하면 닫힌다
+//accont page 햄버거 메뉴
 }
