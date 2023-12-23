@@ -1,6 +1,11 @@
 .dim {
     @include dim;
     z-index:99;
+    display: none;
+
+    &.open{
+        display: block;
+    }
 }
 
 .modal {
@@ -8,6 +13,11 @@
     padding-top:8px;
     background-color:#fff;
     border-radius: 20px 20px 0 0;
+    display: none;
+
+    &.open{
+        display: block;
+    }
 
     // bar
     &::before{
@@ -35,11 +45,12 @@
     max-width: 600px;
     left:50%;
     transform: translateX(-50%);
+    
  
 
     .cmt_scroll_area{ 
         padding: 0 10px;
-        height: 50vh;
+        height: 20vh;
         overflow-y:auto;
     }
 

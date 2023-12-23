@@ -648,6 +648,10 @@ body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
+  display: none;
+}
+.dim.open {
+  display: block;
 }
 
 .modal {
@@ -655,6 +659,10 @@ body {
   padding-top: 8px;
   background-color: #fff;
   border-radius: 20px 20px 0 0;
+  display: none;
+}
+.modal.open {
+  display: block;
 }
 .modal::before {
   content: "";
@@ -682,7 +690,7 @@ body {
 }
 .modal_cmt_container .cmt_scroll_area {
   padding: 0 10px;
-  height: 50vh;
+  height: 20vh;
   overflow-y: auto;
 }
 .modal_cmt_container .cmt_list .cmt {
