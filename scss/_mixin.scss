@@ -134,3 +134,17 @@
     @include blockBox(300, auto, flex);
     @include border($c:red);
 }
+
+@mixin profile($s:27) {
+    display: block;
+    $s : check($s);
+    width:$s;
+    height:$s;
+    border-radius:50%;
+
+    & > img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+}

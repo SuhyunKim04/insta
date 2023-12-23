@@ -1,0 +1,118 @@
+.dim {
+    @include dim;
+    z-index:99;
+}
+
+.modal {
+    z-index:100; 
+    padding-top:8px;
+    background-color:#fff;
+    border-radius: 20px 20px 0 0;
+
+    // bar
+    &::before{
+        content:'';
+        width: 33px;
+        background-color: #737171;
+        height: 4px;
+        display:block;
+        margin:0 auto;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: 600; 
+        padding:12px 0;
+        border-bottom:1px solid #f3f3f3;
+        margin-bottom:10px;
+    } 
+}
+
+.modal_cmt_container{ 
+    position: fixed; 
+    bottom:0;
+    width: 100%;
+    max-width: 600px;
+    left:50%;
+    transform: translateX(-50%);
+ 
+
+    .cmt_scroll_area{ 
+        padding: 0 10px;
+        height: 50vh;
+        overflow-y:auto;
+    }
+
+       
+    .cmt_list{
+         
+        .cmt{
+            display: flex;
+            padding-bottom: 22px;
+
+            .cmt_profile{
+                margin-right: 20px;
+                // @include flex($j: flex-start);
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: block;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                
+            }
+            .cmt_body{
+                a{
+                    margin-right:11px;
+                    font-weight: 600;
+                }
+                span{
+                    font-weight: 600;
+                    color:#A0A0A0;
+                }
+                button{
+                    color:#A0A0A0;
+                    font-weight: 600;
+                }
+            }
+
+            .cmt_heart {
+
+            }
+        }
+    }
+    
+    
+}
+
+
+    
+
+.cmt_write{
+    .emojis{
+        button{
+            width: 42px;
+            height: 42px;
+        }
+
+        i {
+            font-size:20px;
+        }
+    }
+
+    .cmt_chat{
+        margin: 0 16px;
+        .text_area{
+            margin-left:18px;
+        }
+    }
+
+    .profile {
+        @include profile(33);
+    }
+    
+}
