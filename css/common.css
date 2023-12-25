@@ -312,10 +312,14 @@ body {
   font-size: 14px;
 }
 
+.tabbar_menu {
+  position: relative;
+}
 .tabbar_menu ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   height: 74px;
   position: fixed;
   bottom: 0;
@@ -633,8 +637,8 @@ body {
   grid-row-gap: 2px;
 }
 .feed_photo li {
-  width: 126px;
-  height: 126px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
 }
 .feed_photo li img {

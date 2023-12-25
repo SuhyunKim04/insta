@@ -10,8 +10,11 @@ body{
     font-size: 14px;
 }
 .tabbar_menu{
+    position: relative;
+    
     ul{
         @include flex;
+        background-color: #fff;
         height: 74px;
         position: fixed;
         bottom:0;
