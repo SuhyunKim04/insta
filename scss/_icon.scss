@@ -123,3 +123,7 @@ $menu:(
     @include fontIcon(map-get($menu, user));
 }
 
+.ico_book_mark{
+    @include iconBg('book_mark');
+}
+

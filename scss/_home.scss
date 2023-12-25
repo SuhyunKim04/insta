@@ -26,6 +26,7 @@
 
 .story{
     padding: 18px 0 ;
+    margin-left:18px;
     .story_list{
         &::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -93,11 +94,15 @@
             
         }
         .body{
-
             .tool_bar{
-                @include flex($j: flex-start, $c:10px);
+                div{
+                    display: flex;
+                    column-gap: 22px;
+                }
+                @include flex($j: flex-start, $c:180px);
                 height: 40px;
-                margin: 4px 0;
+                margin: 4px 20px 4px 16px;
+
             }
             p{
                 margin-left:6px;
@@ -109,6 +114,7 @@
 
 
 .feed_footer{
+    margin-left: 16px;
     .liked_info{
         display: flex;
         .wholikes{

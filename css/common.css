@@ -299,6 +299,14 @@ select {
   font-size: 24px;
 }
 
+.ico_book_mark {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/book_mark.svg");
+}
+
 body {
   font-family: "Instagram sans", sans-serif;
   font-size: 14px;
@@ -309,6 +317,10 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 74px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 26px 0 0;
 }
 .tabbar_menu ul li {
   flex-basis: 20%;
@@ -420,6 +432,7 @@ body {
 
 .story {
   padding: 18px 0;
+  margin-left: 18px;
 }
 .story .story_list {
   display: flex;
@@ -490,14 +503,21 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 180px;
   height: 40px;
-  margin: 4px 0;
+  margin: 4px 20px 4px 16px;
+}
+.feed_container li .body .tool_bar div {
+  display: flex;
+  column-gap: 22px;
 }
 .feed_container li .body p {
   margin-left: 6px;
 }
 
+.feed_footer {
+  margin-left: 16px;
+}
 .feed_footer .liked_info {
   display: flex;
 }
@@ -626,7 +646,10 @@ body {
 .search_contain {
   margin-top: 40px;
 }
-.search_contain input {
+.search_contain .search_area {
+  margin: 0 12px;
+}
+.search_contain .search_area input {
   width: 100%;
   background-color: #d9d9d9;
   height: 28px;
@@ -722,6 +745,7 @@ body {
   color: #A0A0A0;
   font-weight: 600;
 }
+
 .cmt_write .emojis button {
   width: 42px;
   height: 42px;
