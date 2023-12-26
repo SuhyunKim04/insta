@@ -127,6 +127,8 @@
 
     }
     .emojis{
+        @include flex($a:stretch);
+        padding: 10px 12px;
         button{
             width: 42px;
             height: 42px;
@@ -138,10 +140,10 @@
     }
 
     .cmt_chat{
-        @include flex;
-        margin: 0 16px;
+        @include flex($a:stretch);
+        padding:8px 12px;
         div{
-            @include flex;
+            @include flex($a:stretch);
         }
         .text_area{
             margin-left:18px;
@@ -151,7 +153,7 @@
     }
 
     .profile {
-        @include profile(33);
+        @include profile(50);
     }
     
 }

@@ -309,6 +309,8 @@ select {
   width: 24px;
   height: 24px;
   background-image: url("../images/icon/upload.svg");
+  width: 93px;
+  height: 40px;
 }
 
 .ico_close {
@@ -829,6 +831,12 @@ body {
 .cmt_write .pop.open {
   display: block;
 }
+.cmt_write .emojis {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 12px;
+}
 .cmt_write .emojis button {
   width: 42px;
   height: 42px;
@@ -839,13 +847,13 @@ body {
 .cmt_write .cmt_chat {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 16px;
+  align-items: stretch;
+  padding: 8px 12px;
 }
 .cmt_write .cmt_chat div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .cmt_write .cmt_chat .text_area {
   margin-left: 18px;
@@ -854,8 +862,8 @@ body {
 }
 .cmt_write .profile {
   display: block;
-  width: 33px;
-  height: 33px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
