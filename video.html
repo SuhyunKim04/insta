@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Instagram</title>
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/jquery-1.11.2.min.js"></script>
@@ -13,18 +13,24 @@
 </head>
 <body>
     <section class="reels">
-        <div class="reels_content">
-            <img src="./images/photo/reels.jpg" alt="reels">
-        </div>
+        <ul class="reels_content">
+            <li>
+                <div class="contents">
+                    <img src="./images/photo/reels.jpg" alt="reels">
+                </div> 
+                <div class="reels_header">
+                    <div>
+                        <h2>Reels</h2>
+                        <button class="btn ico_arrowdown_white" type="button"><span class="blind">arrowdown</span></button>
+                    </div>
+                    
+                    <button class="btn ico_camera_white" type="button"><span class="blind">camera</span></button> 
+                </div>
+            </li>
+           
+        </ul>
         
-        <div class="reels_header">
-            <div>
-                <h2>Reels</h2>
-                <button class="btn ico_arrowdown_white" type="button"><span class="blind">arrowdown</span></button>
-            </div>
-            
-            <button class="btn ico_camera_white" type="button"><span class="blind">camera</span></button> 
-        </div>
+       
 
         <nav class="tabbar_menu">
             <ul>

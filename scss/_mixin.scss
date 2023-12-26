@@ -130,6 +130,12 @@
     border-radius: check($b)
 }
 
+@mixin fitImg($size:cover){
+    width:100%;
+    height:100%;
+    object-fit:$size;
+}
+
 .testBox2 {
     @include blockBox(300, auto, flex);
     @include border($c:red);
@@ -144,8 +150,8 @@
     overflow: hidden;
 
     & > img {
-        width:100%;
-        height:100%;
-        object-fit:cover;
+        @include fitImg;
     }
 }
+
+

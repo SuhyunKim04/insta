@@ -37,7 +37,7 @@ const modal_post = () => {
   const post = document.querySelector('.post');
   const tabbar = document.querySelector('.tabbar_menu');
   const ico_create = tabbar.querySelector('.ico_create');
-  const ico_close = document.querySelector('.ico_close');
+  const ico_close = post.querySelector('.ico_close');
   //open_modal
   ico_create.addEventListener('click', (e) => {
     console.log(ico_create)

@@ -161,14 +161,15 @@
 
 
 .post{
-    transform: translateX(-380px);
-    translate: 0.4s;
-    position:absolute;
+    transform: translateX(-100vw);
+    transition: 0.4s;
+    position:fixed;
     top:0;
+    left:0;
+    width: 100vw;
 
     &.open{
         transform: translateX(0);
-        display: block;
     }
 }
 .new_post{
@@ -189,9 +190,7 @@
 }
 
 .post_choose{
-    width: 360px;
-    height: 380px;
-    overflow: hidden;
+    height: 16vh;
 
     img{
         width: 100%;
@@ -213,15 +212,21 @@
 }
 
 .post_pics_scroll{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     overflow-y:auto;
-    height: 30vh;
+    height: calc(84vh - 182px);
     background-color: #fff;
     
     .pics_list{
-        width: 94px;
-        height: 94px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 33vw;
+
+        img{
+            object-fit: cover;
+            width:100%;
+            height: 100%;
+        }
     }
+
 
 }

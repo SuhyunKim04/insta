@@ -12,8 +12,19 @@
     }
 
     .reels_content{
-        position: absolute;
-        bottom:0;
-        top:0;
+        li{
+            position: relative;
+            height: 100vh;
+
+            .contents{
+                position: absolute;
+                left:0;top:0;right:0;bottom:0;
+                z-index: -1;
+
+                img{
+                    @include fitImg;
+                }
+            }
+        }
     }
 }
