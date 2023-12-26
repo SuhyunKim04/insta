@@ -288,15 +288,11 @@ select {
 }
 
 .ico_user {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.ico_user:before {
-  content: "\f2bd";
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/tagme.svg");
 }
 
 .ico_book_mark {
@@ -305,6 +301,48 @@ select {
   width: 24px;
   height: 24px;
   background-image: url("../images/icon/book_mark.svg");
+}
+
+.ico_upload {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/upload.svg");
+}
+
+.ico_close {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/close.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.ico_camera {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/camera.svg");
+}
+
+.ico_multi {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/multi.svg");
+}
+
+.ico_camera_white {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/white_camera.svg");
 }
 
 body {
@@ -595,11 +633,12 @@ body {
 }
 .account_btns a {
   width: 152px;
-  height: 34px;
+  padding: 6px 0;
   text-align: center;
 }
 .account_btns button {
-  width: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 .story_diy {
@@ -750,6 +789,18 @@ body {
   font-weight: 600;
 }
 
+.cmt_write .pop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 10px 14px;
+  column-gap: 200px;
+  display: none;
+}
+.cmt_write .pop.open {
+  display: block;
+}
 .cmt_write .emojis button {
   width: 42px;
   height: 42px;
@@ -758,10 +809,20 @@ body {
   font-size: 20px;
 }
 .cmt_write .cmt_chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 16px;
+}
+.cmt_write .cmt_chat div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .cmt_write .cmt_chat .text_area {
   margin-left: 18px;
+  border: none;
+  column-gap: 12px;
 }
 .cmt_write .profile {
   display: block;
@@ -773,6 +834,95 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.post {
+  transform: translateX(-380px);
+  translate: 0.4s;
+}
+.post.open {
+  transform: translateX(380px);
+}
+
+.new_post {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  padding: 0 12px 0 16px;
+  font-weight: 600;
+}
+.new_post div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 28px;
+}
+.new_post .next_btn {
+  color: #418DCB;
+  font-weight: 600;
+}
+
+.post_choose {
+  width: 360px;
+  height: 380px;
+  overflow: hidden;
+}
+.post_choose img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recent_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  margin: 0 4px 0 8px;
+  height: 54px;
+  background-color: #fff;
+}
+.recent_bar div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.post_pics_scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-y: auto;
+  height: 30vh;
+}
+.post_pics_scroll .pics_list {
+  width: 94px;
+  height: 94px;
+}
+
+.reels {
+  position: relative;
+}
+.reels .reels_header {
+  margin: 0 16px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 230px;
+}
+.reels .reels_header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+  color: #fff;
+}
+.reels .reels_content {
+  height: 100%;
 }
 
 /* Slider */

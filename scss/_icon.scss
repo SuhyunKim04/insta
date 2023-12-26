@@ -120,10 +120,29 @@ $menu:(
     @include fontIcon(map-get($menu, tablecells), $family:'Pro');
 }
 .ico_user{
-    @include fontIcon(map-get($menu, user));
+    @include iconBg('tagme');
 }
 
 .ico_book_mark{
     @include iconBg('book_mark');
 }
 
+.ico_upload{
+    @include iconBg('upload');
+}
+
+.ico_close{
+    @include iconBg('close');
+    width: 16px;
+    height: 16px;
+}
+.ico_camera{
+    @include iconBg('camera');
+}
+.ico_multi{
+    @include iconBg('multi');
+}
+
+.ico_camera_white{
+    @include iconBg('white_camera');
+}

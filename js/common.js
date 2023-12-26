@@ -10,17 +10,39 @@ $(slideWrap).slick({
 
 
 const modal_cmt = () =>{
-  const modal_container = document.querySelector('.modal_cmt_container')
-  const open_cmt = documnet.querySelector('.open_cmt');
+  const modal = document.querySelector('.modal')
+  const open_cmt = document.querySelector('.open_cmt');
   const dim = document.querySelector('.dim');
 
-  //open_modal
-  // open_cmt.addEventListenr('click',(e) => {
-  //   modal_container.
-  // })
+  // open_modal
+  open_cmt.addEventListener('click',(e) => {
+    modal.classList.add('open');
+    dim.classList.add('open')
+  })
+
+  //close_modal
+  dim.addEventListener('click',(e) => {
+    modal.classList.remove('open');
+    e.currentTarget.classList.remove('open')
+  })
+ 
 
   //close_modal
 //댓글창 all view 클릭해도 열리고 icon을 클릭해도 열리고
 //dim 클릭하면 닫힌다
 //accont page 햄버거 메뉴
 }
+
+// const modal_post = () => {
+//   const post = document.querySelector('.post');
+//   const tabbar = document.querySelector('.tabbar_menu');
+//   const ico_create = tabbar.querySelector('.ico_create');
+
+//   //open_modal
+//   ico_create.addEventListener('click', (e) => {
+//     post.classList.add('open');
+//   })
+
+// }
+
+modal_cmt();

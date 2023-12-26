@@ -1,0 +1,17 @@
+.reels{
+    position: relative;
+    .reels_header{
+        margin: 0 16px;
+        div{
+            @include flex($c:8px);
+            color:#fff;
+        }
+        position: absolute;
+        top:0;
+        @include flex($c: 230px);
+    }
+
+    .reels_content{
+        height: 100%;
+    }
+}
