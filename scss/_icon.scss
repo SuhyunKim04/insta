@@ -150,3 +150,7 @@ $menu:(
 .ico_arrowdown_white{
     @include iconBg('arrow_down_white');
 }
+
+.btn:before {
+    color:inherit;
+}

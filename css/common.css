@@ -353,6 +353,10 @@ select {
   background-image: url("../images/icon/arrow_down_white.svg");
 }
 
+.btn:before {
+  color: inherit;
+}
+
 body {
   font-family: "Instagram sans", sans-serif;
   font-size: 14px;
