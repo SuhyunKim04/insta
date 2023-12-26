@@ -147,9 +147,12 @@
 .post{
     transform: translateX(-380px);
     translate: 0.4s;
+    position:absolute;
+    top:0;
 
     &.open{
-        transform: translateX(380px);
+        transform: translateX(0);
+        display: block;
     }
 }
 .new_post{
@@ -184,7 +187,7 @@
 .recent_bar{
     @include flex;
     font-weight: 500;
-    margin: 0 4px 0 8px;
+    padding: 0 4px 0 8px;
     height: 54px;
     background-color: #fff;
     div{
@@ -198,6 +201,7 @@
     grid-template-columns: repeat(3,1fr);
     overflow-y:auto;
     height: 30vh;
+    background-color: #fff;
     
     .pics_list{
         width: 94px;

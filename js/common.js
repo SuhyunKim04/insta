@@ -33,16 +33,24 @@ const modal_cmt = () =>{
 //accont page 햄버거 메뉴
 }
 
-// const modal_post = () => {
-//   const post = document.querySelector('.post');
-//   const tabbar = document.querySelector('.tabbar_menu');
-//   const ico_create = tabbar.querySelector('.ico_create');
+const modal_post = () => {
+  const post = document.querySelector('.post');
+  const tabbar = document.querySelector('.tabbar_menu');
+  const ico_create = tabbar.querySelector('.ico_create');
+  const ico_close = document.querySelector('.ico_close');
+  //open_modal
+  ico_create.addEventListener('click', (e) => {
+    console.log(ico_create)
+    post.classList.add('open');
+  })
 
-//   //open_modal
-//   ico_create.addEventListener('click', (e) => {
-//     post.classList.add('open');
-//   })
+  //close_modal
+  ico_close.addEventListener('click',(e) => {
+    console.log(ico_close)
+    post.classList.remove('open')
+  })
 
-// }
+}
 
 modal_cmt();
+modal_post();

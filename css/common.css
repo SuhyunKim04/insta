@@ -345,6 +345,14 @@ select {
   background-image: url("../images/icon/white_camera.svg");
 }
 
+.ico_arrowdown_white {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/arrow_down_white.svg");
+}
+
 body {
   font-family: "Instagram sans", sans-serif;
   font-size: 14px;
@@ -839,9 +847,12 @@ body {
 .post {
   transform: translateX(-380px);
   translate: 0.4s;
+  position: absolute;
+  top: 0;
 }
 .post.open {
-  transform: translateX(380px);
+  transform: translateX(0);
+  display: block;
 }
 
 .new_post {
@@ -880,7 +891,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  margin: 0 4px 0 8px;
+  padding: 0 4px 0 8px;
   height: 54px;
   background-color: #fff;
 }
@@ -896,6 +907,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   overflow-y: auto;
   height: 30vh;
+  background-color: #fff;
 }
 .post_pics_scroll .pics_list {
   width: 94px;
@@ -922,7 +934,9 @@ body {
   color: #fff;
 }
 .reels .reels_content {
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
 }
 
 /* Slider */
