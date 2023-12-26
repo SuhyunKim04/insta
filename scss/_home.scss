@@ -95,11 +95,12 @@
         }
         .body{
             .tool_bar{
+                
                 div{
                     display: flex;
                     column-gap: 22px;
                 }
-                @include flex($j: flex-start, $c:180px);
+                @include flex;
                 height: 40px;
                 margin: 4px 20px 4px 16px;
 

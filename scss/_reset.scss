@@ -54,7 +54,9 @@ img{
 }
 
 // form
-textarea { resize:none;}
+textarea { 
+	border:none;
+}
 
 button {
 	border: none; cursor:pointer;
