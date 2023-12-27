@@ -37,6 +37,7 @@ $menu:(
         content:$code;
         font-family: "Font Awesome 6 #{$family}"; 
         font-size: check($size);
+        color:inherit !important;
         @if $style == 'bounce' {
             animation: fa-bounce 1s infinite cubic-bezier(.28,.84,.42,1) both;
         }
@@ -55,10 +56,19 @@ $menu:(
 
 .ico_msg{
     @include fontIcon(map-get($menu, msg));
+
+    &.active{
+        color:red;
+    }
 }
 
 .ico_heart{
-    @include fontIcon(map-get($menu, heart));
+    @include iconBg('empty_heart');
+
+    &.active{
+       background-image: url($icon + 'heart.svg');
+    }
+    
 }
 
 .ico_kebab{

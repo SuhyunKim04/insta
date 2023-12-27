@@ -120,6 +120,7 @@ select {
   content: "\f082";
   font-family: "Font Awesome 6 Brands";
   font-size: 16px;
+  color: inherit !important;
 }
 
 .ico_msg {
@@ -132,18 +133,21 @@ select {
   content: "\f075";
   font-family: "Font Awesome 6 Free";
   font-size: 24px;
+  color: inherit !important;
+}
+.ico_msg.active {
+  color: red;
 }
 
 .ico_heart {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/empty_heart.svg");
 }
-.ico_heart:before {
-  content: "\f004";
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
+.ico_heart.active {
+  background-image: url("../images/icon/heart.svg");
 }
 
 .ico_kebab {
@@ -164,6 +168,7 @@ select {
   content: "\f1d8";
   font-family: "Font Awesome 6 Free";
   font-size: 24px;
+  color: inherit !important;
 }
 
 .ico_home {
@@ -285,6 +290,7 @@ select {
   content: "\f00a";
   font-family: "Font Awesome 6 Pro";
   font-size: 24px;
+  color: inherit !important;
 }
 
 .ico_user {

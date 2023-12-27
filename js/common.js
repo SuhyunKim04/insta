@@ -52,5 +52,17 @@ const modal_post = () => {
 
 }
 
+const iconToggle = () => {
+  const toggle = document.querySelectorAll('.toggle');
+  console.log(toggle)
+  toggle.forEach(icon => {
+    icon.addEventListener('click', () => {
+      console.log('clicked')
+      icon.classList.toggle('active');
+    })
+  })
+}
+
 modal_cmt();
 modal_post();
+iconToggle();
