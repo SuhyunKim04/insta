@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    <textarea class="chat"></textarea>
+    <button class="btn" type="button">upload</button>
+  </form>
+    <div class="comment"></div>
+
+
+    
+  <script>
+    const chat = document.querySelector('.chat');
+    const btn = document.querySelector('.btn')
+    const comment = document.querySelector('.comment');
+    let html ='';
+    btn.addEventListener('click',() => {
+        html += `<p class="text">${chat.value}</p>
+        <span>❤️</span>`;
+        comment.innerHTML = html;
+    })
+
+ 
+  </script>
+</body>
+</html>

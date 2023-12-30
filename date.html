@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function timeStamp() {
+            let today = new Date();
+            let year = today.getFullYear();
+            let month = today.getMonth()+1;
+            let date = today.getDate(); 
+            
+            let hours = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds(); 
+    
+            let nowDate = `${year}-${month}-${date}  ${hours}:${min}:${sec}`
+            return nowDate;
+        }
+        
+ 
+    </script>
+</body>
+</html>

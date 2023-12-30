@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+    <textarea class="chat"></textarea>
+    <button class="btn" type="button">upload</button>
+  </form>
+  <ul class="cmtList"></ul>
+
+
+    
+  <script>
+    const chat = document.querySelector('.chat');
+    const btn = document.querySelector('.btn')
+    const cmtList = document.querySelector('.cmtList'); 
+    btn.addEventListener('click',() => {
+        let li = document.createElement('LI');
+        li.innerHTML = `
+            <p>${chat.value}</p>
+            <button class="reply">Reply</button>
+            <span>heart</span>
+        `
+        cmtList.appendChild(li)
+    })
+
+ 
+  </script>
+</body>
+</html>

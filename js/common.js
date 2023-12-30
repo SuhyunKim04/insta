@@ -89,14 +89,30 @@ const iconToggle = () => {
 //   }
 // }
 
+function timeStamp() {
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth()+1;
+  let date = today.getDate(); 
+  
+  let hours = today.getHours();
+  let min = today.getMinutes();
+  let sec = today.getSeconds(); 
+
+  let nowDate = `${year}-${month}-${date}  ${hours}:${min}:${sec}`
+  return nowDate;
+}
+
 
 const modalReply =() =>{
-  const reply = document.querySelectorAll('.reply');
+  const cmt_item = document.querySelectorAll('.cmt_item');
   const pop = document.querySelector('.pop');
   const ico_close = pop.querySelector('.ico_close');
+  const reply = document.querySelector('.reply')
 
-  reply.forEach(chat => {
-    chat.addEventListener('click', (e) => {
+  cmt_item.forEach((item,idx) => {
+    reply = btn;
+    reply.addEventListener('click', (e) => {
       console.log(chat)
       pop.classList.add('open')
     })
@@ -112,6 +128,6 @@ modal_cmt();
 modal_post();
 iconToggle();
 // login();
-modalReply();
+// modalReply();
 
 top_modal();

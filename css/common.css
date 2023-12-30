@@ -852,14 +852,14 @@ body {
   height: 40vh;
   overflow-y: auto;
 }
-.modal_cmt_container .cmt_list .cmt {
+.modal_cmt_container .cmt_list .cmt_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 22px;
   column-gap: 16px;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_profile {
+.modal_cmt_container .cmt_list .cmt_item .cmt_profile {
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -867,34 +867,34 @@ body {
   display: block;
   flex-shrink: 0;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_profile img {
+.modal_cmt_container .cmt_list .cmt_item .cmt_profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_body {
+.modal_cmt_container .cmt_list .cmt_item .cmt_body {
   flex-grow: 1;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_body a {
+.modal_cmt_container .cmt_list .cmt_item .cmt_body a {
   margin-right: 11px;
   font-weight: 600;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_body span {
+.modal_cmt_container .cmt_list .cmt_item .cmt_body span {
   font-weight: 600;
   color: #A0A0A0;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_body button {
+.modal_cmt_container .cmt_list .cmt_item .cmt_body button {
   color: #A0A0A0;
   font-weight: 600;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_heart {
+.modal_cmt_container .cmt_list .cmt_item .cmt_heart {
   flex-basis: 46px;
   flex-shrink: 0;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_heart img {
+.modal_cmt_container .cmt_list .cmt_item .cmt_heart img {
   width: 24px;
 }
-.modal_cmt_container .cmt_list .cmt .cmt_heart span {
+.modal_cmt_container .cmt_list .cmt_item .cmt_heart span {
   display: block;
   margin-top: 32px;
 }

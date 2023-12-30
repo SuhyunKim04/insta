@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {max-width:100%;}
+        .cmtList img {
+            width:30px;height:30px;border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+  <form name="cmtForm">
+    <textarea class="chat" name="comment" required></textarea>
+    <button class="btn" type="submit">upload</button>
+  </form>
+  <p></p>
+  <ul class="cmtList"></ul>
+ 
+  <script>
+    const form = document.forms.cmtForm;
+    const cmt = form.comment;
+    const cmtList = document.querySelector('.cmtList')
+    const p = document.querySelector('p');
+    let nowTime;
+
+    getList();
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        nowTime = timeStamp();
+        createCmt();
+    })
+
+    function getList() {
+        let items = cmtList.querySelectorAll('.cmt_item');
+        console.log(items)
+    }
+
+    function createCmt() {
+        if(validForm()) {
+            // add cmt;
+            const li = document.createElement('LI');
+            li.classList.add('cmt_item')
+            li.innerHTML = `
+                <a href="https://www.google.ca/" class="cmt_profile">
+                    <img src="./images/photo/profile_6.jpg" alt="profile">
+                </a>
+                
+                <div class="cmt_body">
+                    <a href="https://www.google.ca/" class="user_name">
+                        jenny
+                    </a>
+                    <span>${nowTime}</span>
+                    <div class="article">
+                        <p>${cmt.value}</p>
+                    </div>
+                    <button type="button" class="reply">Reply</button>
+                </div>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
+                </button> 
+            `;
+
+            cmtList.appendChild(li) 
+        }
+
+        getList();
+    }
+
+    function timeStamp() {
+            let today = new Date();
+            let year = today.getFullYear();
+            let month = today.getMonth()+1;
+            let date = today.getDate(); 
+            
+            let hours = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds(); 
+    
+            let nowDate = `${year}-${month}-${date}  ${hours}:${min}:${sec}`
+            return nowDate;
+        }
+
+    function validForm() {
+        if(cmt.value.trim() == '') {
+        //    alert('유효한 값을 입력하세');
+        //    cmt.style.outline = "2px solid red"
+        //    cmt.focus();
+            return false;
+        } 
+
+        return true;
+    }
+
+ 
+  </script>
+</body>
+</html>
