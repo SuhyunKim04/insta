@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: none;
+        fill: #070808;
         stroke: #131313;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -11,6 +11,5 @@
       }
     </style>
   </defs>
-  <polyline class="cls-1" points="3.82 22.18 3.82 2.26 20.18 2.26 20.18 22.18"/>
-  <polyline class="cls-1" points="3.82 22.18 12.01 12.54 20.18 22.18"/>
+  <polygon class="cls-1" points="20.18 21.96 12.01 12.32 3.82 21.96 3.82 2.04 20.18 2.04 20.18 21.96"/>
 </svg>

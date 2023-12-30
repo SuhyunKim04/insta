@@ -1,7 +1,7 @@
 .reels{
     position: relative;
     .reels_header{
-        margin: 0 16px;
+        margin: 10px 16px 0;
         div{
             @include flex($c:8px);
             color:#fff;
@@ -24,6 +24,14 @@
                 img{
                     @include fitImg;
                 }
+            }
+
+            .bottom_icons{
+                color:#fff;
+                position: absolute;
+                bottom:15vh;
+                right:0;
+               text-align: center;
             }
         }
     }

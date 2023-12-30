@@ -14,7 +14,11 @@
 <body>
     <div class="all_wrap">
         <div class="top_header box">
-            <h2>Sustagram</h2>
+            <div class="modal_focus">
+                <h2>Sustagram</h2>
+                <button class="btn ico_arrowdown" type="button"><span class="blind">arrowdown</span></button> 
+            </div>
+           
             <div class="header_btns">
                 <button class="btn ico_heart" type="button"><span class="blind">heart</span></button> 
                 <button class="btn ico_msg" type="button"><span class="blind">message</span></button>   
@@ -135,8 +139,8 @@
                     <div class="tool_bar">
                         <div>
                             <button class="btn ico_heart toggle" type="button"><span class="blind">heart</span></button>
-                            <button class="btn ico_msg" type="button"><span class="blind">message</span></button>
-                            <button class="btn ico_msg_f toggle" type="button"><span class="blind">message</span></button>
+                            <button class="btn ico_chat" type="button"><span class="blind">message</span></button>
+                            <button class="btn ico_msg toggle" type="button"><span class="blind">message</span></button>
                         </div>
                         
                         <button class="btn ico_book_mark  toggle" type="button"><span class="blind">book_mark</span></button>
@@ -216,11 +220,10 @@
                     <div class="article">
                         <p>winter winter winter winter</p>
                     </div>
-                    <button type="button">Reply</button>
+                    <button type="button" class="reply">Reply</button>
                 </div> 
-                <button type="button"  class="cmt_heart">
-                    <img src="./images/icon/empty_heart.svg" alt="empty_heart">
-                    <span>2</span>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
                 </button> 
                 
             </li>
@@ -237,11 +240,10 @@
                     <div class="article">
                         <p>winter winter winter winter</p>
                     </div>
-                    <button type="button">Reply</button>
+                    <button type="button" class="reply">Reply</button>
                 </div>
-                <button type="button"  class="cmt_heart">
-                    <img src="./images/icon/empty_heart.svg" alt="empty_heart">
-                    <span>2</span>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
                 </button> 
             </li>
             <li class="cmt"> 
@@ -257,11 +259,10 @@
                     <div class="article">
                         <p>winter winter winter winter</p>
                     </div>
-                    <button type="button">Reply</button>
+                    <button type="button" class="reply">Reply</button>
                 </div>
-                <button type="button"  class="cmt_heart">
-                    <img src="./images/icon/empty_heart.svg" alt="empty_heart">
-                    <span>2</span>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
                 </button> 
             </li>
             <li class="cmt"> 
@@ -277,11 +278,10 @@
                     <div class="article">
                         <p>winter winter winter winter</p>
                     </div>
-                    <button type="button">Reply</button>
+                    <button type="button" class="reply">Reply</button>
                 </div>
-                <button type="button"  class="cmt_heart">
-                    <img src="./images/icon/empty_heart.svg" alt="empty_heart">
-                    <span>2</span>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
                 </button> 
             </li>
             <li class="cmt"> 
@@ -297,11 +297,10 @@
                     <div class="article">
                         <p>winter winter winter winter</p>
                     </div>
-                    <button type="button">Reply</button>
+                    <button type="button" class="reply">Reply</button>
                 </div>
-                <button type="button"  class="cmt_heart">
-                    <img src="./images/icon/empty_heart.svg" alt="empty_heart">
-                    <span>2</span>
+                <button type="button"  class="cmt_heart toggle">
+                    <span class="num">2</span>
                 </button> 
             </li>
         </ul>
@@ -310,7 +309,7 @@
     <article class="cmt_write">
         <div class="pop">
             <p>Replying to Coco</p>
-            <button class="btn ico_close" type="button"><span class="blind">cloase</span></button>
+            <button class="btn ico_close" type="button"><span class="blind">close</span></button>
         </div>
 
         <div class="emojis">
@@ -350,7 +349,7 @@
 
         <div class="cmt_chat">
             <div>
-                <a href="https://www.google.ca/" class="profile">
+                <a href="./account.html" class="profile">
                     <img src="./images/photo/profile_4.jpg" alt="profile">
                 </a>
     
@@ -430,6 +429,22 @@
             </li>
         </ul>
     </article>
+</section>
+
+<section class="top_modal">
+   <ul>
+    <li class="follo">
+        <button class="btn ico_follow" type="sublit"><span>follow</span></button>
+    </li>
+    <li class="favo">
+        <p>Favorites</p>
+        <button class="btn ico_favo" type="sublit" ><span class="blind">Favorites</span></button>
+        
+    </li>
+    <li class="meta">
+        <button class="btn ico_meta" type="sublit"><span>Meta Verified</span></button>
+    </li>
+   </ul>
 </section>
     <script src="./js/common.js"></script>
 </body>

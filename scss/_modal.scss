@@ -93,15 +93,17 @@
 
             .cmt_heart{
                 flex-basis:46px;
-                flex-shrink: 0;;
+                flex-shrink: 0;
 
                 img {
                     width:24px;
+
+
                 }
 
                 span {
                     display:block;
-                    margin-top:4px;
+                    margin-top:32px;
                 }
             }
         }
@@ -122,7 +124,7 @@
         display: none;
 
         &.open{
-            display: block;
+            display: flex;
         }
 
     }
@@ -229,4 +231,19 @@
     }
 
 
+}
+
+.top_modal{
+    background-color:#fff;
+    width: 166px;
+    height: 130px;
+    position: absolute;
+    top:10vh;
+    left:6vw;
+    @include borderRadius($b:5%);
+    display: none;
+
+    &.open{
+        display: block;
+    }
 }

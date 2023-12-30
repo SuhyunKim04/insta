@@ -1,5 +1,4 @@
 const slideWrap = document.querySelector('.slide_wrap');
-console.log(slideWrap)
 $(slideWrap).slick({
     dots: true,
     infinite: true,
@@ -13,6 +12,7 @@ const modal_cmt = () =>{
   const modal = document.querySelector('.modal')
   const open_cmt = document.querySelector('.open_cmt');
   const dim = document.querySelector('.dim');
+  
 
   // open_modal
   open_cmt.addEventListener('click',(e) => {
@@ -26,11 +26,17 @@ const modal_cmt = () =>{
     e.currentTarget.classList.remove('open')
   })
  
+}
 
-  //close_modal
-//댓글창 all view 클릭해도 열리고 icon을 클릭해도 열리고
-//dim 클릭하면 닫힌다
-//accont page 햄버거 메뉴
+const top_modal = () => {
+  const modal_focus = document.querySelector('.modal_focus button');
+ 
+  const top_modal = document.querySelector('.top_modal');
+
+  modal_focus.addEventListener('click', (e) => {
+    console.log('hello')
+    top_modal.classList.toggle('open')
+  })
 }
 
 const modal_post = () => {
@@ -54,6 +60,7 @@ const modal_post = () => {
 
 const iconToggle = () => {
   const toggle = document.querySelectorAll('.toggle');
+  const num = document.querySelectorAll
   console.log(toggle)
   toggle.forEach(icon => {
     icon.addEventListener('click', () => {
@@ -61,8 +68,50 @@ const iconToggle = () => {
       icon.classList.toggle('active');
     })
   })
+  //숫자 올리기
+}
+
+// const login = () => {
+//   const id = document.querySelector('.id');
+//   const psw = document.querySelector('.psw');
+//   const start = document.querySelector('.start');
+  
+//   function checkIn() {
+//     if(id.value == "suhyun" && psw.value == "webpublisher"){
+//       start.addEventListener('click',(e) => {
+//         console.log(start)
+//         window.location.href = './home.html'
+//       })
+//       return start.style.backgroundColor = "#3e89ee"
+//     }else if(id.value == "" && psw.value == ""){
+//       alert('다시 시도하세요')
+//     }
+//   }
+// }
+
+
+const modalReply =() =>{
+  const reply = document.querySelectorAll('.reply');
+  const pop = document.querySelector('.pop');
+  const ico_close = pop.querySelector('.ico_close');
+
+  reply.forEach(chat => {
+    chat.addEventListener('click', (e) => {
+      console.log(chat)
+      pop.classList.add('open')
+    })
+  })
+  
+
+  ico_close.addEventListener('click', (e) => {
+    pop.classList.remove('open')
+  })
 }
 
 modal_cmt();
 modal_post();
 iconToggle();
+// login();
+modalReply();
+
+top_modal();

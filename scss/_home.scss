@@ -6,13 +6,17 @@
  
 .all_wrap {
     @extend %base_wrap;
+    position: relative;
 }
 .top_header{
     @extend %base_wrap;
     @include flex;
     // background-color: red;
-    height: 88px;
+    height: 77px;
     padding: 0 22px 0 17px;
+    div{
+        @include flex;
+    }
     h2{
         font-family: 'Lobster', sans-serif;
         font-size: 24px;
@@ -25,7 +29,7 @@
  
 
 .story{
-    padding: 18px 0 ;
+    padding: 12px 0 ;
     margin-left:18px;
     .story_list{
         &::-webkit-scrollbar {

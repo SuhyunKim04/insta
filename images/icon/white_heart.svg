@@ -4,13 +4,11 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #131313;
-        stroke-linecap: round;
-        stroke-linejoin: round;
+        stroke: #fff;
+        stroke-miterlimit: 10;
         stroke-width: 2px;
       }
     </style>
   </defs>
-  <polyline class="cls-1" points="3.82 22.18 3.82 2.26 20.18 2.26 20.18 22.18"/>
-  <polyline class="cls-1" points="3.82 22.18 12.01 12.54 20.18 22.18"/>
+  <path class="cls-1" d="M19.17,12.71l-7.17,6.93-7.16-6.93c-1.98-1.91-1.98-5.01,0-6.92,1.98-1.91,5.19-1.91,7.16,0,1.98-1.91,5.19-1.91,7.17,0,1.98,1.92,1.98,5.01,0,6.92Z"/>
 </svg>

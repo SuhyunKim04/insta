@@ -54,8 +54,8 @@ $menu:(
     @include fontIcon(map-get($sns, f), $family: 'Brands', $size:16);
 }
 
-.ico_msg{
-    @include fontIcon(map-get($menu, msg));
+.ico_chat{
+    @include iconBg('chat');
 
     &.active{
         color:red;
@@ -75,8 +75,8 @@ $menu:(
     @include iconBg('kebab');
 }
 
-.ico_msg_f{
-    @include fontIcon(map-get($menu, plane));
+.ico_msg{
+    @include iconBg('message');
 }
 
 .ico_home{
@@ -135,6 +135,10 @@ $menu:(
 
 .ico_book_mark{
     @include iconBg('book_mark');
+
+    &.active{
+        @include iconBg('book_mark_black');
+    }
 }
 
 .ico_upload{
@@ -157,6 +161,8 @@ $menu:(
 
 .ico_camera_white{
     @include iconBg('white_camera');
+    width: 30px;
+    height: 30px;
 }
 
 .ico_arrowdown_white{
@@ -165,4 +171,36 @@ $menu:(
 
 .btn:before {
     color:inherit;
+}
+
+.cmt_heart{
+    @include iconBg('empty_heart');
+    width:24px;
+
+    &.active{
+        background-image: url($icon + 'heart.svg');
+     }
+}
+
+.ico_follow{
+    @include iconBg('follow');
+}
+
+.ico_favo{
+    @include iconBg('favorites');
+}
+
+.ico_white_heart{
+    @include iconBg('white_heart');
+}
+.ico_white_chat{
+    @include iconBg('white_chat');
+}
+
+.ico_white_message{
+    @include iconBg('white_message');
+}
+
+.ico_white_meatball{
+    @include iconBg('white_meatball');
 }
