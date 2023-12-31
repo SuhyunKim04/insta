@@ -1083,6 +1083,10 @@ body {
   right: 0;
   text-align: center;
 }
+.reels .reels_content li .bottom_icons .icons_col {
+  left: -50%;
+  transform: translateX(-50%);
+}
 
 /* Slider */
 .slick-slider {
