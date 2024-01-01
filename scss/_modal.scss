@@ -242,8 +242,23 @@
     left:6vw;
     @include borderRadius($b:5%);
     display: none;
+    padding: 12px;
+
+    &.shadow{
+        @include shadow($b:7, $a:0.8);
+    }
 
     &.open{
         display: block;
+    }
+
+    li{
+        div{
+            @include flex($c:80px);
+        }
+    }
+
+    .meta{
+        white-space: nowrap;
     }
 }

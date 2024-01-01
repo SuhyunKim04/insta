@@ -28,6 +28,46 @@ const modal_cmt = () =>{
  
 }
 
+
+const modal_chat = () => {
+  const modal_cmt_container = document.querySelector('.modal_cmt_container');
+  const dep1 = modal_cmt_container.querySelector('.dep1');
+  const cmt_chat = document.querySelector('.cmt_chat');
+  const ico_upload = cmt_chat.querySelector('.ico_upload');
+
+  const chat = document.querySelector('.text_focus')
+
+  ico_upload.addEventListener('click', () => {
+    console.log('hello')
+    let li = document.createElement('LI');
+    li.innerHTML = `
+      <a href="https://www.google.ca/" class="cmt_profile">
+        <img src="./images/photo/profile_4.jpg" alt="profile">
+      </a>
+
+      <div class="cmt_body">
+          <a href="https://www.google.ca/">
+              michaela
+          </a>
+          <span>6 h</span>
+          <div class="article">
+              <p>${chat.value}</p>
+          </div>
+          <button type="button" class="reply">Reply</button>
+      </div> 
+      <button type="button"  class="cmt_heart toggle">
+          <span class="num">2</span>
+      </button> 
+    `
+
+    dep1.appendChild(li)
+  })
+
+
+}
+
+
+
 const top_modal = () => {
   const modal_focus = document.querySelector('.modal_focus button');
  
@@ -58,18 +98,21 @@ const modal_post = () => {
 
 }
 
+
+
 const iconToggle = () => {
   const toggle = document.querySelectorAll('.toggle');
   const num = document.querySelectorAll
   console.log(toggle)
   toggle.forEach(icon => {
     icon.addEventListener('click', () => {
-      console.log('clicked')
       icon.classList.toggle('active');
     })
   })
   //숫자 올리기
 }
+
+
 
 // const login = () => {
 //   const id = document.querySelector('.id');
@@ -131,3 +174,4 @@ iconToggle();
 // modalReply();
 
 top_modal();
+modal_chat();
