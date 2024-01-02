@@ -28,14 +28,121 @@ const modal_cmt = () =>{
  
 }
 
+const modal_ham = () => {
+  const modal = document.querySelector('.modal');
+  console.log(modal)
+  const ham = document.querySelector('.ico_hamburger');
+  const dim = document.querySelector('.dim');
+
+  //open modal
+  ham.addEventListener('click',(e) => {
+    console.log('hello')
+    dim.classList.add('open')
+    modal.classList.add('open');
+  })
+
+  //close modal
+  dim.addEventListener('click',(e) => {
+    modal.classList.remove('open');
+    e.currentTarget.classList.remove('open')
+  })
+
+
+}
+
+
+const photos = [0,1,2,3,4,5,6];
+let randomPhotos = photos[getRandomElementIndex()];
+  console.log(randomPhotos);
+function getRandomElementIndex() {
+  let random = Math.random() * photos.length;
+  return Math.floor(random);
+  
+}
+
+// const name = [
+//   Liam,
+//   Noah,
+//   Luna,
+//   Ava,
+//   James,
+//   Lucas,
+//   Clara
+// ]
+
+const img = [
+
+]
+// const datas =[
+//   {
+//     id:0,
+//     name: Liam,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_${randomPhotos}.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:1,
+//     name: Noah,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_7.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:2,
+//     name: Luna,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_6.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:3,
+//     name: Ava,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_2.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:4,
+//     name: James,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_5.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:5,
+//     name: Lucas,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_4.jpg" alt="profile">
+//     </a>`
+// },
+// {
+//     id:6,
+//     name: Clara,
+//     photo: `
+//     <a href="https://www.google.ca/" class="cmt_profile">
+//       <img src="./images/photo/profile_1.jpg" alt="profile">
+//     </a>`
+// }
+
+// ]
 
 const modal_chat = () => {
   const modal_cmt_container = document.querySelector('.modal_cmt_container');
   const dep1 = modal_cmt_container.querySelector('.dep1');
   const cmt_chat = document.querySelector('.cmt_chat');
   const ico_upload = cmt_chat.querySelector('.ico_upload');
-
   const chat = document.querySelector('.text_focus')
+
+  function info(index) {
+    name.innerHTML = datas[index]
+  }
 
   ico_upload.addEventListener('click', () => {
     console.log('hello')
@@ -175,3 +282,4 @@ iconToggle();
 
 top_modal();
 modal_chat();
+modal_ham();

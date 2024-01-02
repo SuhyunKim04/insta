@@ -1,19 +1,15 @@
 .reels{
-    position: relative;
     .reels_header{
         margin: 10px 16px 0;
+        @include flex;
         div{
             @include flex($c:8px);
             color:#fff;
         }
-        position: absolute;
-        top:0;
-        @include flex($c: 230px);
     }
 
     .reels_content{
         li{
-            position: relative;
             height: 100vh;
 
             .contents{
@@ -33,7 +29,7 @@
                 right:0;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-end;
              
                 .icons_col{
                     padding-bottom: 18px;

@@ -253,6 +253,7 @@
     }
 
     li{
+        margin-bottom:18px;
         div{
             @include flex($c:80px);
         }
@@ -260,5 +261,20 @@
 
     .meta{
         white-space: nowrap;
+    }
+}
+
+.modal_ham_container{
+    position: fixed; 
+    bottom:0;
+    width: 100%;
+    max-width: 600px;
+    left:50%;
+    transform: translateX(-50%);
+
+    .ham_list{
+        .ham_item{
+            @include flex;
+        }
     }
 }

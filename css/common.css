@@ -251,6 +251,9 @@ select {
   height: 24px;
   background-image: url("../images/icon/ham.svg");
 }
+.ico_hamburger.open {
+  display: block;
+}
 
 .ico_show_user {
   display: block;
@@ -1046,6 +1049,9 @@ body {
 .top_modal.open {
   display: block;
 }
+.top_modal li {
+  margin-bottom: 18px;
+}
 .top_modal li div {
   display: flex;
   justify-content: space-between;
@@ -1056,17 +1062,25 @@ body {
   white-space: nowrap;
 }
 
-.reels {
-  position: relative;
+.modal_ham_container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.reels .reels_header {
-  margin: 10px 16px 0;
-  position: absolute;
-  top: 0;
+.modal_ham_container .ham_list .ham_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 230px;
+}
+
+.reels .reels_header {
+  margin: 10px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .reels .reels_header div {
   display: flex;
@@ -1076,7 +1090,6 @@ body {
   color: #fff;
 }
 .reels .reels_content li {
-  position: relative;
   height: 100vh;
 }
 .reels .reels_content li .contents {
@@ -1099,7 +1112,7 @@ body {
   right: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 .reels .reels_content li .bottom_icons .icons_col {
   padding-bottom: 18px;

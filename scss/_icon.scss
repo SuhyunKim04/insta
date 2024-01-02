@@ -117,6 +117,10 @@ $menu:(
 
 .ico_hamburger{
     @include iconBg('ham');
+
+    &.open{
+        display: block;
+    }
 }
 
 .ico_show_user{
