@@ -190,23 +190,34 @@ const iconToggle = () => {
 
 
 
-// const login = () => {
-//   const id = document.querySelector('.id');
-//   const psw = document.querySelector('.psw');
-//   const start = document.querySelector('.start');
+const login = () => {
+  const id = document.querySelector('.id');
+  const psw = document.querySelector('.psw');
+  const start = document.querySelector('.start');
+
+  start.addEventListener('click',(e) => {
+    console.log(start)
+    let check = checkIn();
+    if(check) {
+      // login success
+      // window.location.href = './home.html';
+    } else {
+      // login fail
+    }
+    
+  })
+  function checkIn() {
+    if(id.value == "suhyun" && psw.value == "webpublisher"){
+      return true;
+    }else {
+      return false;
+    }
+  }
   
-//   function checkIn() {
-//     if(id.value == "suhyun" && psw.value == "webpublisher"){
-//       start.addEventListener('click',(e) => {
-//         console.log(start)
-//         window.location.href = './home.html'
-//       })
-//       return start.style.backgroundColor = "#3e89ee"
-//     }else if(id.value == "" && psw.value == ""){
-//       alert('다시 시도하세요')
-//     }
-//   }
-// }
+}
+
+
+//로그인 버튼을 클릭했을떼 아이디와 비번이 맞는지 확인하고 맞으면 이동하게 한다 
 let nums = [ 1,2,3,4,5]
 let result = nums.map( data => data*2)
 
