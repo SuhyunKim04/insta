@@ -9,8 +9,11 @@ $(slideWrap).slick({
 
 
 const modal_cmt = () =>{
-  const modal = document.querySelector('.modal')
   const open_cmt = document.querySelector('.open_cmt');
+  if( !open_cmt ) {
+    return false;
+  }
+  const modal = document.querySelector('.modal')
   const dim = document.querySelector('.dim');
   
 
@@ -29,9 +32,12 @@ const modal_cmt = () =>{
 }
 
 const modal_ham = () => {
-  const modal = document.querySelector('.modal');
-  console.log(modal)
   const ham = document.querySelector('.ico_hamburger');
+
+  if( !ham ) {
+    return false;
+  }
+  const modal = document.querySelector('.modal'); 
   const dim = document.querySelector('.dim');
 
   //open modal
@@ -51,112 +57,72 @@ const modal_ham = () => {
 }
 
 
-const photos = [0,1,2,3,4,5,6];
-let randomPhotos = photos[getRandomElementIndex()];
-  console.log(randomPhotos);
-function getRandomElementIndex() {
-  let random = Math.random() * photos.length;
-  return Math.floor(random);
-  
-}
 
-// const name = [
-//   Liam,
-//   Noah,
-//   Luna,
-//   Ava,
-//   James,
-//   Lucas,
-//   Clara
-// ]
 
-const img = [
+ 
 
-]
-// const datas =[
-//   {
-//     id:0,
-//     name: Liam,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_${randomPhotos}.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:1,
-//     name: Noah,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_7.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:2,
-//     name: Luna,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_6.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:3,
-//     name: Ava,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_2.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:4,
-//     name: James,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_5.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:5,
-//     name: Lucas,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_4.jpg" alt="profile">
-//     </a>`
-// },
-// {
-//     id:6,
-//     name: Clara,
-//     photo: `
-//     <a href="https://www.google.ca/" class="cmt_profile">
-//       <img src="./images/photo/profile_1.jpg" alt="profile">
-//     </a>`
-// }
-
-// ]
 
 const modal_chat = () => {
+  //init;
   const modal_cmt_container = document.querySelector('.modal_cmt_container');
+  if(!modal_cmt_container){
+    return false;
+  }
   const dep1 = modal_cmt_container.querySelector('.dep1');
   const cmt_chat = document.querySelector('.cmt_chat');
   const ico_upload = cmt_chat.querySelector('.ico_upload');
   const chat = document.querySelector('.text_focus')
+  const count = document.querySelector('.cmt_count');
+  let cmtList = []
+  
+  let allCount;
 
-  function info(index) {
-    name.innerHTML = datas[index]
+  const names = [
+    'Liam',
+    'Noah',
+    'Luna',
+    'Ava',
+    'James',
+    'Lucas',
+    'Clara'
+  ]
+
+  getCount();
+
+  // get Random
+  function getNum() {
+    return  Math.floor(Math.random() * 6);
   }
 
-  ico_upload.addEventListener('click', () => {
-    console.log('hello')
+  ico_upload.addEventListener('click',addCmt) 
+
+  chat.addEventListener('keydown', (e) => {
+    if(e.keyCode == 13){
+      addCmt();
+    }
+  })
+    
+  function getCount() { 
+    count.innerHTML =  document.querySelectorAll('.cmt_item').length;
+  }
+
+
+  function addCmt() {
+    let randomN = getNum(); 
     let li = document.createElement('LI');
+    let now = timeStamp();
+   
+    li.classList.add('cmt_item')
     li.innerHTML = `
       <a href="https://www.google.ca/" class="cmt_profile">
-        <img src="./images/photo/profile_4.jpg" alt="profile">
+        <img src="./images/photo/profile_${randomN}.jpg" alt="profile">
       </a>
 
       <div class="cmt_body">
           <a href="https://www.google.ca/">
-              michaela
+              ${names[randomN]}
           </a>
-          <span>6 h</span>
+          <span>${now}</span>
           <div class="article">
               <p>${chat.value}</p>
           </div>
@@ -168,16 +134,19 @@ const modal_chat = () => {
     `
 
     dep1.appendChild(li)
-  })
-
-
+    
+    getCount() 
+  }
+ 
 }
 
 
 
 const top_modal = () => {
   const modal_focus = document.querySelector('.modal_focus button');
- 
+  if(!modal_focus){
+    return false;
+  }
   const top_modal = document.querySelector('.top_modal');
 
   modal_focus.addEventListener('click', (e) => {
@@ -238,19 +207,31 @@ const iconToggle = () => {
 //     }
 //   }
 // }
+let nums = [ 1,2,3,4,5]
+let result = nums.map( data => data*2)
+
+
+let result2 = []
+
+nums.forEach(data => {
+ result2.push(data*2)
+})
+console.log(result)
 
 function timeStamp() {
   let today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth()+1;
   let date = today.getDate(); 
-  
-  let hours = today.getHours();
-  let min = today.getMinutes();
-  let sec = today.getSeconds(); 
+   
+  month = month < 10 ? `0${month}` : month;
+  date = date < 10 ? `0${date}` : date;
 
-  let nowDate = `${year}-${month}-${date}  ${hours}:${min}:${sec}`
-  return nowDate;
+  let times = [ today.getHours(), today.getMinutes(), today.getSeconds()]
+  times = times.map(data => data < 10 ? `0${data}` : data)
+  
+  return  `${year}-${month}-${date}  ${times[0]}:${times[1]}:${times[2]}`
+  
 }
 
 
