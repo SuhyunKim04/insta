@@ -115,8 +115,8 @@ $menu:(
     }
 }
 
-.ico_hamburger{
-    @include iconBg('ham');
+.ico_login{
+    @include iconBg('login');
 
     &.open{
         display: block;

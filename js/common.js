@@ -1,11 +1,22 @@
-const slideWrap = document.querySelector('.slide_wrap');
-$(slideWrap).slick({
+const slideWrap = document.querySelectorAll('.slide_wrap');
+//foreach로 슬리이드 만들기
+
+slideWrap.forEach((slides,idx) => {
+  $(slides).slick({
     dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     // adaptiveHeight: true
   });
+})
+// $(slideWrap).slick({
+//     dots: true,
+//     infinite: true,
+//     speed: 300,
+//     slidesToShow: 1,
+//     // adaptiveHeight: true
+//   });
 
 
 const modal_cmt = () =>{
@@ -57,25 +68,23 @@ const modal_ham = () => {
 }
 
 
-
-
- 
-
-
 const modal_chat = () => {
   //init;
+  const reset = document.querySelector('.title');
   const modal_cmt_container = document.querySelector('.modal_cmt_container');
   if(!modal_cmt_container){
     return false;
   }
   const dep1 = modal_cmt_container.querySelector('.dep1');
   const cmt_chat = document.querySelector('.cmt_chat');
-  const ico_upload = cmt_chat.querySelector('.ico_upload');
-  const chat = document.querySelector('.text_focus')
   const count = document.querySelector('.cmt_count');
+  const cmtForm = document.forms.cmt_form;
+  const msg = cmtForm.msg;
   let cmtList = []
   
   let allCount;
+
+  let textList = [];
 
   const names = [
     'Liam',
@@ -94,50 +103,83 @@ const modal_chat = () => {
     return  Math.floor(Math.random() * 6);
   }
 
-  ico_upload.addEventListener('click',addCmt) 
-
-  chat.addEventListener('keydown', (e) => {
-    if(e.keyCode == 13){
-      addCmt();
-    }
-  })
+  // msg.addEventListener('keydown', (e) => {
+  //   if(e.keyCode == 13){
+  //     addCmt();
+  //   }
+  // })
     
   function getCount() { 
     count.innerHTML =  document.querySelectorAll('.cmt_item').length;
   }
 
-
-  function addCmt() {
-    let randomN = getNum(); 
-    let li = document.createElement('LI');
+  function printList() {
+    textList = getStorage();
     let now = timeStamp();
+    
+    let html = '';
+    textList.forEach(text => {
+      let randomN = getNum(); 
+      html += `
+      <li class="cmt_item">
+         <a href="https://www.google.ca/" class="cmt_profile">
+           <img src="./images/photo/profile_${randomN}.jpg" alt="profile">
+         </a>
    
-    li.classList.add('cmt_item')
-    li.innerHTML = `
-      <a href="https://www.google.ca/" class="cmt_profile">
-        <img src="./images/photo/profile_${randomN}.jpg" alt="profile">
-      </a>
+         <div class="cmt_body">
+             <a href="https://www.google.ca/">
+                 ${names[randomN]}
+             </a>
+             <span>${now}</span>
+             <div class="article">
+                 <p>${text}</p>
+             </div>
+             <button type="button" class="reply">Reply</button>
+         </div> 
+         <button type="button"  class="cmt_heart toggle">
+             <span class="num">2</span>
+         </button> 
+       </li>
+       `
+    })
 
-      <div class="cmt_body">
-          <a href="https://www.google.ca/">
-              ${names[randomN]}
-          </a>
-          <span>${now}</span>
-          <div class="article">
-              <p>${chat.value}</p>
-          </div>
-          <button type="button" class="reply">Reply</button>
-      </div> 
-      <button type="button"  class="cmt_heart toggle">
-          <span class="num">2</span>
-      </button> 
-    `
-
-    dep1.appendChild(li)
+    dep1.innerHTML = html;
     
     getCount() 
   }
- 
+
+  cmtForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addItem();
+    console.log(textList)
+  })
+
+  function getStorage() {
+    let strList = localStorage.getItem('dep1');
+    if(!strList) {
+      return [];
+    }else {
+      return JSON.parse(strList);
+    }
+  }
+
+  function addItem() {
+    textList = getStorage();
+    textList.push(msg.value);
+    localStorage.setItem('dep1', JSON.stringify(textList))
+    
+    printList();
+  }
+
+
+
+  function resetAll() {
+    localStorage.clear();
+    dep1.innerHTML = '';
+    msg.value = '';
+  }
+  reset.addEventListener('click', resetAll)
+
 }
 
 
@@ -159,6 +201,10 @@ const modal_post = () => {
   const post = document.querySelector('.post');
   const tabbar = document.querySelector('.tabbar_menu');
   const ico_create = tabbar.querySelector('.ico_create');
+
+  if( !ico_create ) {
+    return false;
+  }
   const ico_close = post.querySelector('.ico_close');
   //open_modal
   ico_create.addEventListener('click', (e) => {
@@ -265,6 +311,8 @@ const modalReply =() =>{
     pop.classList.remove('open')
   })
 }
+
+
 
 modal_cmt();
 modal_post();

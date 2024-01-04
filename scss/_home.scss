@@ -83,6 +83,7 @@
 }
 .feed_container{
     li{
+        margin-bottom: 20px;
         .header{
             @include flex;
             padding: 10px 0;

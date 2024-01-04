@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>객체형</title>
     <style>
 
     </style>
@@ -11,20 +11,20 @@
 <body>
     <h1>Comment</h1>
     <form name="todoForm">
+        <input type="text" name="user" placeholder="Input name">
         <input type="text" name="msg" placeholder="Input Do things" required> 
         <button type="submit">Upload</button>
     </form>
     <ul class="todoList">
 
     </ul>
-    <div class="test"></div>
-    <button type="button" id="reset">RESET Storage</button>Í
+    <button type="button" id="reset">RESET Storage</button>
 
     <script>
         const todoForm = document.forms.todoForm; 
         const msg = todoForm.msg;
+        const user = todoForm.user;
         const ul = document.querySelector('.todoList');
-        const test = document.querySelector('.test');
         const reset = document.getElementById('reset')
         let todoList = []; 
 
@@ -55,7 +55,10 @@
         function addItem() {
             todoList = getStorage(); 
             // getInputValue
-            todoList.push(msg.value); 
+            todoList.push({
+                writer : user.value,
+                todo : msg.value
+            }); 
             console.log('todoList : ', todoList)
 
             // set Storage 
@@ -68,7 +71,7 @@
             todoList = getStorage(); 
             let html ='';
             todoList.forEach( (item,idx) => {
-                html += `<li>${item}</li>`; 
+                html += `<li> name : ${item.writer} , msg : ${item.todo}</li>`; 
             })
 
             ul.innerHTML = html; 
