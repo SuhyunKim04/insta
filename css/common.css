@@ -616,6 +616,9 @@ body {
   margin-right: 8px;
 }
 
+.feed_container {
+  margin-bottom: 100px;
+}
 .feed_container li {
   margin-bottom: 20px;
 }

@@ -199,12 +199,13 @@ const top_modal = () => {
 
 const modal_post = () => {
   const post = document.querySelector('.post');
-  const tabbar = document.querySelector('.tabbar_menu');
-  const ico_create = tabbar.querySelector('.ico_create');
-
-  if( !ico_create ) {
+  if( !post ) {
     return false;
   }
+  const tabbar = document.querySelector('.tabbar_menu');
+  const ico_create = tabbar.querySelector('.ico_create');
+  
+  
   const ico_close = post.querySelector('.ico_close');
   //open_modal
   ico_create.addEventListener('click', (e) => {
@@ -237,27 +238,32 @@ const iconToggle = () => {
 
 
 const login = () => {
-  const id = document.querySelector('.id');
-  const psw = document.querySelector('.psw');
-  const start = document.querySelector('.start');
-
-  start.addEventListener('click',(e) => {
-    console.log(start)
-    let check = checkIn();
-    if(check) {
-      // login success
-      // window.location.href = './home.html';
-    } else {
-      // login fail
-    }
-    
-  })
-  function checkIn() {
-    if(id.value == "suhyun" && psw.value == "webpublisher"){
-      return true;
-    }else {
+  const login = document.forms.loginForm;
+  if(!login) return false;
+  const userId = login.userId;
+  const userPw = login.userPw; 
+  login.addEventListener('submit',(e) => {
+    e.preventDefault(); 
+    let success = validateLogin();
+    console.log(success)
+    if(!success)  {
+      resetAll();
+      userId.focus();
+      userId.style.outline = '2px solid red';
       return false;
-    }
+    } 
+    window.location.href = './home.html';
+  })
+  function validateLogin() {
+    const id = 'suhyun';
+    const pw = '1234';
+    let checkInfo = userId.value === id && userPw.value === pw;
+    return checkInfo ? true : false; 
+  }
+
+  function resetAll() {
+    userId.value ='';
+    userPw.value='';
   }
   
 }
@@ -286,9 +292,7 @@ function timeStamp() {
 
   let times = [ today.getHours(), today.getMinutes(), today.getSeconds()]
   times = times.map(data => data < 10 ? `0${data}` : data)
-  
   return  `${year}-${month}-${date}  ${times[0]}:${times[1]}:${times[2]}`
-  
 }
 
 
@@ -317,7 +321,7 @@ const modalReply =() =>{
 modal_cmt();
 modal_post();
 iconToggle();
-// login();
+login();
 // modalReply();
 
 top_modal();
