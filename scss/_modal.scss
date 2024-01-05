@@ -143,15 +143,18 @@
 
     .cmt_chat{
         @include flex($a:stretch);
-        padding:8px 12px;
-        div{
-            @include flex($a:stretch);
-        }
+        padding:8px 10px;
+    
         .text_area{
             margin-left:18px;
             border: none;
             column-gap: 12px;
         }
+
+        .cmt_form{
+            display: flex;
+        }
+       
     }
 
     .profile {

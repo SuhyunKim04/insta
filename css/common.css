@@ -940,17 +940,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 8px 12px;
-}
-.cmt_write .cmt_chat div {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  padding: 8px 10px;
 }
 .cmt_write .cmt_chat .text_area {
   margin-left: 18px;
   border: none;
   column-gap: 12px;
+}
+.cmt_write .cmt_chat .cmt_form {
+  display: flex;
 }
 .cmt_write .profile {
   display: block;

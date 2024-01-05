@@ -1,5 +1,4 @@
 const slideWrap = document.querySelectorAll('.slide_wrap');
-//foreach로 슬리이드 만들기
 
 slideWrap.forEach((slides,idx) => {
   $(slides).slick({
@@ -7,17 +6,9 @@ slideWrap.forEach((slides,idx) => {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    // adaptiveHeight: true
+
   });
 })
-// $(slideWrap).slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 1,
-//     // adaptiveHeight: true
-//   });
-
 
 const modal_cmt = () =>{
   const open_cmt = document.querySelector('.open_cmt');
@@ -42,30 +33,6 @@ const modal_cmt = () =>{
  
 }
 
-const modal_ham = () => {
-  const ham = document.querySelector('.ico_hamburger');
-
-  if( !ham ) {
-    return false;
-  }
-  const modal = document.querySelector('.modal'); 
-  const dim = document.querySelector('.dim');
-
-  //open modal
-  ham.addEventListener('click',(e) => {
-    console.log('hello')
-    dim.classList.add('open')
-    modal.classList.add('open');
-  })
-
-  //close modal
-  dim.addEventListener('click',(e) => {
-    modal.classList.remove('open');
-    e.currentTarget.classList.remove('open')
-  })
-
-
-}
 
 
 const modal_chat = () => {
@@ -109,6 +76,60 @@ const modal_chat = () => {
   //   }
   // })
     
+
+const datas =[
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'James',
+  msg:'Love',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Liam',
+  msg:'Sad',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Noah',
+  msg:'Books',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Ava',
+  msg:'Banana',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Lucas',
+  msg:'clouds',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Clara',
+  msg:'WooYoo',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Nency',
+  msg:'This is my happiness',
+  count:3,
+  },
+  {
+  photo: 'profile[randomPhoto]',
+  name: 'Nicole',
+  msg:'happy',
+  count:3,
+  },
+  
+]
+
+
   function getCount() { 
     count.innerHTML =  document.querySelectorAll('.cmt_item').length;
   }
