@@ -21,6 +21,7 @@
     }
     img{
         @include borderRadius(100%, 100%);
+        object-fit: cover;
     }
     div{
         text-align: center;
