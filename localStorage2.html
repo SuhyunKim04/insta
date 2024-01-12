@@ -19,13 +19,27 @@
 
     </ul>
     <button type="button" id="reset">RESET Storage</button>
-
+        <div class="emojis">
+            <button type="button">
+                <span class="blind">heart</span>
+                <i>🥰</i>
+            </button>
+            <button type="button">
+                <span class="blind">anger</span>
+                <i>😡</i>
+            </button> 
+            <button type="button">
+                <span class="blind">heart</span>
+                <i>❤️</i>
+            </button> 
+        </div>
     <script>
         const todoForm = document.forms.todoForm; 
         const msg = todoForm.msg;
         const user = todoForm.user;
         const ul = document.querySelector('.todoList');
-        const reset = document.getElementById('reset')
+        const reset = document.getElementById('reset');
+        const emojis = document.querySelectorAll('.emojis button');
         let todoList = []; 
 
         printList();
@@ -76,6 +90,17 @@
 
             ul.innerHTML = html; 
         }
+
+        
+            emojis.forEach((item,idx) => {
+            item.addEventListener('click', () => {
+
+          msg.value = msg.value + item.children[1].textContent
+                })
+            })
+        
+
+        
     </script>
 </body>
 </html>

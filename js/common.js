@@ -15,7 +15,7 @@ const modal_cmt = () =>{
   if( !open_cmt ) {
     return false;
   }
-  const modal = document.querySelector('.modal')
+  const modal = document.querySelector('.modal');
   const dim = document.querySelector('.dim');
   
 
@@ -44,14 +44,14 @@ const modal_chat = () => {
   }
   const dep1 = modal_cmt_container.querySelector('.dep1');
   const cmt_chat = document.querySelector('.cmt_chat');
+  const emojis = document.querySelectorAll('.emojis button');
   const count = document.querySelector('.cmt_count');
   const cmtForm = document.forms.cmt_form;
   const msg = cmtForm.msg;
-  let cmtList = []
+  let textList = [];
   
   let allCount;
-
-  let textList = [];
+  printList();
 
   const names = [
     'Liam',
@@ -65,6 +65,15 @@ const modal_chat = () => {
 
   getCount();
 
+
+  emojis.forEach((item,idx) => {
+    item.addEventListener('click', () => {
+      console.log(item.children[1].textContent)
+
+      msg.value = msg.value + item.children[1].textContent
+    })
+  })
+
   // get Random
   function getNum() {
     return  Math.floor(Math.random() * 6);
@@ -75,59 +84,7 @@ const modal_chat = () => {
   //     addCmt();
   //   }
   // })
-    
-
-const datas =[
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'James',
-  msg:'Love',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Liam',
-  msg:'Sad',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Noah',
-  msg:'Books',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Ava',
-  msg:'Banana',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Lucas',
-  msg:'clouds',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Clara',
-  msg:'WooYoo',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Nency',
-  msg:'This is my happiness',
-  count:3,
-  },
-  {
-  photo: 'profile[randomPhoto]',
-  name: 'Nicole',
-  msg:'happy',
-  count:3,
-  },
   
-]
 
 
   function getCount() { 
@@ -135,25 +92,23 @@ const datas =[
   }
 
   function printList() {
-    textList = getStorage();
-    let now = timeStamp();
+    getStorage();
     
     let html = '';
     textList.forEach(text => {
-      let randomN = getNum(); 
       html += `
       <li class="cmt_item">
          <a href="https://www.google.ca/" class="cmt_profile">
-           <img src="./images/photo/profile_${randomN}.jpg" alt="profile">
+           <img src=${text.photo} alt="profile">
          </a>
    
          <div class="cmt_body">
              <a href="https://www.google.ca/">
-                 ${names[randomN]}
+                ${text.name}
              </a>
-             <span>${now}</span>
+             <span>${text.time}</span>
              <div class="article">
-                 <p>${text}</p>
+                 <p>${text.chat}</p>
              </div>
              <button type="button" class="reply">Reply</button>
          </div> 
@@ -184,11 +139,26 @@ const datas =[
     }
   }
 
+  function getValue() {
+    let num = getNum()
+    let chat = msg.value
+    let name = names[num]
+    let photo = `./images/photo/profile_${num}.jpg`
+    let time = timeStamp();
+    return [chat,name,photo,time]
+  }
+
   function addItem() {
-    textList = getStorage();
-    textList.push(msg.value);
+    getStorage();
+    let  [ chat, name, photo,time] =  getValue();
+    textList.push({
+      name: name,
+      chat: chat,
+      photo: photo,
+      time: time
+    })
     localStorage.setItem('dep1', JSON.stringify(textList))
-    
+    console.log('textList ;',textList)
     printList();
   }
 

@@ -1136,14 +1136,16 @@ body {
 .reels .reels_content li .video_info {
   margin-left: 14px;
   position: absolute;
-  bottom: 150px;
+  bottom: 110px;
   color: #fff;
   font-weight: 500;
+  font-size: 16px;
 }
 .reels .reels_content li .video_info div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 18px;
 }
 .reels .reels_content li .video_info a {
   width: 33px;
@@ -1157,6 +1159,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.reels .reels_content li .video_info .btn_follow {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin-left: 8px;
 }
 
 /* Slider */
