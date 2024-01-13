@@ -257,8 +257,8 @@
 
     li{
         margin-bottom:18px;
-        div{
-            @include flex($c:80px);
+        a{
+            @include flex;
         }
     }
 

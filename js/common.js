@@ -149,6 +149,7 @@ const modal_chat = () => {
   }
 
   function addItem() {
+    msg.value = '';
     getStorage();
     let  [ chat, name, photo,time] =  getValue();
     textList.push({

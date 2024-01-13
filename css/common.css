@@ -5,20 +5,14 @@ input {
   border: 1px solid #d8d8d8;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, figure, figcaption {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
   width: 100%;
-}
-
-body {
   overflow-x: hidden;
 }
 
@@ -1057,11 +1051,10 @@ body {
 .top_modal li {
   margin-bottom: 18px;
 }
-.top_modal li div {
+.top_modal li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 80px;
 }
 .top_modal .meta {
   white-space: nowrap;
