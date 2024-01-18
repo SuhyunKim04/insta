@@ -12,8 +12,8 @@
     @extend %base_wrap;
     @include flex;
     // background-color: red;
-    height: 77px;
-    padding: 0 22px 0 17px;
+    height: 56px;
+    padding: 0 12px;
     div{
         @include flex;
     }
@@ -75,21 +75,26 @@
 }
 .both{
     img{
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         border-radius: 100%;
         margin-right:8px;
     }
 }
 .feed_container{
     margin-bottom: 100px;
-    li{
+    & > li{
         margin-bottom: 20px;
         .header{
+            
             @include flex;
             padding: 10px 0;
             margin-right: 20px;
             margin-left:16px;
+
+            &::before{
+                border-top: 1px solid #aaa;
+            }
             .header_inside{
                 @include flex;
                 
@@ -104,11 +109,11 @@
                 
                 div{
                     display: flex;
-                    column-gap: 22px;
+                    column-gap: 12px;
                 }
                 @include flex;
                 height: 40px;
-                margin: 4px 20px 4px 16px;
+                margin: 0 20px 4px 16px;
 
             }
             p{
@@ -121,9 +126,10 @@
 
 
 .feed_footer{
-    margin-left: 16px;
-    div{
+   margin: 0 16px;
+    .content{
         padding-bottom: 4px;
+       
     }
     .liked_info{
         display: flex;
@@ -141,9 +147,24 @@
         }
     }
 }
-.feed_contents{
-    display: flex;
+
+.feed_contents { 
+    
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    // -webkit-box-orient: vertical;
+    
+    .content {
+        display:inline; 
+        margin-left:0;
+        p {
+            display:inline;
+        }
+    }
 }
+ 
 
 
 

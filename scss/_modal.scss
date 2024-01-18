@@ -144,15 +144,23 @@
     .cmt_chat{
         @include flex($a:stretch);
         padding:8px 10px;
+        
     
         .text_area{
             margin-left:18px;
             border: none;
-            column-gap: 12px;
+           
+
+            // textarea{
+            //     @include flex;
+            //     text-align: center;
+            // }
         }
 
         .cmt_form{
-            display: flex;
+            @include flex;
+            border: 1px solid #A0A0A0;
+            border-radius: 50px;
         }
        
     }
@@ -237,19 +245,17 @@
 }
 
 .top_modal{
-    background-color:#fff;
+    background-color:rgba(225,225,225,0.7);
     width: 166px;
     height: 130px;
     position: absolute;
-    top:10vh;
+    top:50px;
     left:6vw;
     @include borderRadius($b:5%);
     display: none;
     padding: 12px;
-
-    &.shadow{
-        @include shadow($b:7, $a:0.8);
-    }
+    // @include shadow($b:7, $a:0.8);
+    backdrop-filter: blur(5px);
 
     &.open{
         display: block;

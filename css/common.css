@@ -5,7 +5,7 @@ input {
   border: 1px solid #d8d8d8;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption {
+body, div, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -152,7 +152,7 @@ select {
   background: no-repeat center center/contain;
   width: 24px;
   height: 24px;
-  background-image: url("../images/icon/message.svg");
+  background-image: url("../images/icon/message33.svg");
 }
 
 .ico_home {
@@ -168,6 +168,14 @@ select {
   width: 24px;
   height: 24px;
   background-image: url("../images/icon/tab_home_red.svg");
+}
+
+.ico_meta {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/meta.svg");
 }
 
 .ico_search {
@@ -427,7 +435,11 @@ body {
 }
 
 .tabbar_menu {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #c1c1c1;
 }
 .tabbar_menu ul {
   display: flex;
@@ -435,10 +447,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 74px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  padding: 0 26px 0 0;
 }
 .tabbar_menu ul li {
   flex-basis: 20%;
@@ -540,8 +549,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 77px;
-  padding: 0 22px 0 17px;
+  height: 56px;
+  padding: 0 12px;
 }
 .top_header div {
   display: flex;
@@ -604,8 +613,8 @@ body {
 }
 
 .both img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 100%;
   margin-right: 8px;
 }
@@ -613,10 +622,10 @@ body {
 .feed_container {
   margin-bottom: 100px;
 }
-.feed_container li {
+.feed_container > li {
   margin-bottom: 20px;
 }
-.feed_container li .header {
+.feed_container > li .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -624,33 +633,36 @@ body {
   margin-right: 20px;
   margin-left: 16px;
 }
-.feed_container li .header .header_inside {
+.feed_container > li .header::before {
+  border-top: 1px solid #aaa;
+}
+.feed_container > li .header .header_inside {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.feed_container li .header .header_inside p {
+.feed_container > li .header .header_inside p {
   font-weight: 500;
 }
-.feed_container li .body .tool_bar {
+.feed_container > li .body .tool_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  margin: 4px 20px 4px 16px;
+  margin: 0 20px 4px 16px;
 }
-.feed_container li .body .tool_bar div {
+.feed_container > li .body .tool_bar div {
   display: flex;
-  column-gap: 22px;
+  column-gap: 12px;
 }
-.feed_container li .body p {
+.feed_container > li .body p {
   margin-left: 6px;
 }
 
 .feed_footer {
-  margin-left: 16px;
+  margin: 0 16px;
 }
-.feed_footer div {
+.feed_footer .content {
   padding-bottom: 4px;
 }
 .feed_footer .liked_info {
@@ -669,8 +681,12 @@ body {
   object-fit: cover;
 }
 
-.feed_contents {
-  display: flex;
+.feed_contents .content {
+  display: inline;
+  margin-left: 0;
+}
+.feed_contents .content p {
+  display: inline;
 }
 
 .account_header {
@@ -940,10 +956,13 @@ body {
 .cmt_write .cmt_chat .text_area {
   margin-left: 18px;
   border: none;
-  column-gap: 12px;
 }
 .cmt_write .cmt_chat .cmt_form {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #A0A0A0;
+  border-radius: 50px;
 }
 .cmt_write .profile {
   display: block;
@@ -1032,18 +1051,16 @@ body {
 }
 
 .top_modal {
-  background-color: #fff;
+  background-color: rgba(225, 225, 225, 0.7);
   width: 166px;
   height: 130px;
   position: absolute;
-  top: 10vh;
+  top: 50px;
   left: 6vw;
   border-radius: 5%;
   display: none;
   padding: 12px;
-}
-.top_modal.shadow {
-  filter: drop-shadow(0px 8px 7px rgba(225, 225, 225, 0.8));
+  backdrop-filter: blur(5px);
 }
 .top_modal.open {
   display: block;

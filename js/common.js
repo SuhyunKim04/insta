@@ -17,6 +17,7 @@ const modal_cmt = () =>{
   }
   const modal = document.querySelector('.modal');
   const dim = document.querySelector('.dim');
+  const btnChat = document.querySelector('.ico_chat');
   
 
   // open_modal
@@ -30,8 +31,15 @@ const modal_cmt = () =>{
     modal.classList.remove('open');
     e.currentTarget.classList.remove('open')
   })
+
+  btnChat.addEventListener('click', (e) => {
+    modal.classList.add('open');
+    dim.classList.add('open')
+  })
  
 }
+
+
 
 
 
@@ -78,13 +86,6 @@ const modal_chat = () => {
   function getNum() {
     return  Math.floor(Math.random() * 6);
   }
-
-  // msg.addEventListener('keydown', (e) => {
-  //   if(e.keyCode == 13){
-  //     addCmt();
-  //   }
-  // })
-  
 
 
   function getCount() { 
@@ -149,7 +150,6 @@ const modal_chat = () => {
   }
 
   function addItem() {
-    msg.value = '';
     getStorage();
     let  [ chat, name, photo,time] =  getValue();
     textList.push({
@@ -161,6 +161,7 @@ const modal_chat = () => {
     localStorage.setItem('dep1', JSON.stringify(textList))
     console.log('textList ;',textList)
     printList();
+    msg.value = '';
   }
 
 

@@ -162,8 +162,13 @@
                             <a href="https://www.naver.com/">
                                 <strong>Woo_Yoo</strong>
                             </a>
-                            <p>Every winter I should miss you</p>
-                            <button>more</button>
+                            
+                            <div class="content" id="content">
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
+                            </div>
+                            <button type="button" id="btn">More</button>
                         </div>
 
                         <button type="button" class="open_cmt">View all <span class="cmt_count"></span> comments</button>
@@ -340,7 +345,7 @@
             <form name="cmt_form" class="cmt_form">
                 <div class="text_area">
 
-                    <textarea name="msg"></textarea>
+                    <textarea name="msg" placeholder="write comments"></textarea>
                 </div>
                 <button class="btn ico_upload" type="submit"><span class="blind">upload</span></button>
             </form>
@@ -433,11 +438,27 @@
     <li class="meta">
         <a href="#">
             <span>Meta Verified</span>
-            <span class="btnico_meta"></span>
+            <span class="ico_meta"></span>
         </a>
     </li>
    </ul>
 </section>
     <script src="./js/common.js"></script>
+    <script>
+        const contents = document.getElementById('content');
+        const btn =document.getElementById('btn')
+        let contAll = contents.innerText;
+        let summary = contAll.slice(1, 102);
+
+        contents.innerHTML = summary + '...';
+
+        btn.addEventListener('click', ()=> {
+            btn.style.display = 'none';
+            contents.innerHTML = contAll;
+        })
+
+
+        
+    </script>
 </body>
 </html>
