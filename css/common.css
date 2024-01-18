@@ -61,6 +61,7 @@ button {
   cursor: pointer;
   background: none;
   padding: 0;
+  color: inherit;
 }
 
 fieldset {
