@@ -289,33 +289,20 @@ function timeStamp() {
 }
 
 
-const modalReply =() =>{
-  const cmt_item = document.querySelectorAll('.cmt_item');
-  const pop = document.querySelector('.pop');
-  const ico_close = pop.querySelector('.ico_close');
-  const reply = document.querySelector('.reply')
+const icoFeed = document.querySelector('.ico_feed');
+const feedPhoto = document.querySelector('.feed_photo');
+const feedReels = document.querySelector('.feed_reels');
+const icoVideo = document.querySelector('.ico_video');
 
-  cmt_item.forEach((item,idx) => {
-    reply = btn;
-    reply.addEventListener('click', (e) => {
-      console.log(chat)
-      pop.classList.add('open')
-    })
-  })
-  
-
-  ico_close.addEventListener('click', (e) => {
-    pop.classList.remove('open')
-  })
-}
-
+icoVideo.addEventListener('click',(e) => {
+  feedReels.classList.add('open')
+})
 
 
 modal_cmt();
 modal_post();
 iconToggle();
 login();
-// modalReply();
 
 top_modal();
 modal_chat();
