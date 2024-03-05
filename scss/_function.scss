@@ -8,12 +8,6 @@
     }
 };
 
-//숫자인지먼저 비교하고, 숫자가 아니면 사이즈 리턴하고 끝이고
-// 숫자가 이면 0 인지 아닌지 체크하고 리턴
- // $size : if( unitless($size),  #{$size}px,  $size);
-
-
-
 @function check2($size){
     
     $type : type-of($value: $size);
